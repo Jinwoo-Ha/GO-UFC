@@ -5,48 +5,98 @@
 
 {% block content %}
 <style>
+    body {
+        background-color: #0a0a0a;
+        color: #f5f5f5;
+        font-family: 'Arial', sans-serif;
+    }
+    .search-container {
+        border-radius: 10px;
+        padding: 40px;
+        margin-bottom: 40px;
+    }
+    .search-container h2 {
+        font-size: 38px;
+        margin-bottom: 30px;
+        text-align: center;
+        color: #e6e6e6;
+    }
+    .search-form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+    .search-form input[type="text"] {
+        width: 50%;
+        padding: 15px 20px;
+        font-size: 20px;
+        border: none;
+        border-radius: 30px 0 0 30px;
+        background-color: #333;
+        color: #fff;
+    }
+    .search-form button {
+        background-color: #d20a0a;
+        color: white;
+        padding: 15px 30px;
+        border: none;
+        border-radius: 0 30px 30px 0;
+        cursor: pointer;
+        font-size: 20px;
+        transition: background-color 0.3s ease;
+    }
+    .search-form button:hover {
+        background-color: #ff0000;
+    }
     .category-menu {
         display: flex;
-        justify-content: flex-end; /* 버튼을 오른쪽에 정렬 */
+        justify-content: flex-end;
         margin-bottom: 20px;
+        padding-right: 20px;
     }
     .category-menu button {
-        margin: 0 15px;
-        padding: 10px 20px;
-        background-color: #161616;
-        color: white;
+        margin-left: 15px;
+        padding: 12px 25px;
+        background-color: #f5f5f5;
+        color: #161616;
         border: none;
-        border-radius: 5px;
+        border-radius: 50px;
         font-size: 16px;
-        cursor: not-allowed; /* 클릭 불가능한 커서 */
+        cursor: pointer;
+        transition: background-color 0.3s ease, color 0.3s ease;
     }
     .category-menu button:hover {
         background-color: #333;
+        color: #f5f5f5;
     }
     .video-container {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        gap: 40px;
         padding: 20px;
+        max-width: 1300px;
+        margin: 0 auto;
+        position: relative;
     }
     .video-item {
-        background-color: #161616;
-        border-radius: 10px;
+        background-color: #1a1a1a;
+        border-radius: 15px;
         overflow: hidden;
-        transition: transform 0.3s ease;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
         border: 1px solid #333;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
     }
     .video-item:hover {
-        transform: scale(1.05);
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        transform: translateY(-10px);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.8);
     }
     .video-thumbnail {
         width: 100%;
         height: 0;
         padding-bottom: 56.25%;
         position: relative;
-        margin-bottom: 10px;
+        background-color: #000;
     }
     .video-thumbnail iframe {
         position: absolute;
@@ -54,41 +104,64 @@
         left: 0;
         width: 100%;
         height: 100%;
-        border-radius: 10px 10px 0 0;
+        border-radius: 15px 15px 0 0;
     }
     .video-info {
-        padding: 10px;
-        text-align: left;
+        padding: 15px;
     }
     .video-title {
         font-weight: bold;
-        margin-bottom: 5px;
+        font-size: 18px;
+        margin-bottom: 10px;
+        color: #f5f5f5;
     }
     .video-description {
         font-size: 14px;
-        color: #aaa;
+        color: #ccc;
+    }
+    @media (max-width: 768px) {
+        .video-container {
+            grid-template-columns: 1fr;
+        }
+    }
+    .top-right-menu {
+        position: absolute;
+        top: -80px; /* 비디오 컨테이너 상단에 배치, 위에서 더 띄움 */
+        right: 0;
     }
 </style>
 
-<h1>UFC Videos</h1>
-
-<div class="category-menu">
-    <button>New</button>
-    <button>Hot</button>
-    <button>Recommend</button>
+<div class="search-container">
+    <h2>Search UFC Videos</h2>
+    <form class="search-form" method="GET" action="{% url 'video_list' %}">
+        <input type="text" name="q" placeholder="Search for videos..." value="{{ query }}" required>
+        <button type="submit">Search</button>
+    </form>
 </div>
 
 <div class="video-container">
-    {% for video in videos %}
-        <div class="video-item">
-            <div class="video-thumbnail">
-                <iframe src="https://www.youtube.com/embed/{{ video.youtube_id }}" frameborder="0" allowfullscreen></iframe>
-            </div>
-            <div class="video-info">
-                <div class="video-title">{{ video.title }}</div>
-                <div class="video-description">{{ video.description }}</div>
-            </div>
+    <div class="top-right-menu">
+        <div class="category-menu">
+            <button>New</button>
+            <button>Hot</button>
+            <button>Recommend</button>
         </div>
-    {% endfor %}
+    </div>
+
+    {% if videos %}
+        {% for video in videos %}
+            <div class="video-item">
+                <div class="video-thumbnail">
+                    <iframe src="https://www.youtube.com/embed/{{ video.youtube_id }}" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <div class="video-title">{{ video.title }}</div>
+                    <div class="video-description">{{ video.description }}</div>
+                </div>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>No videos found matching your search criteria.</p>
+    {% endif %}
 </div>
 {% endblock %}

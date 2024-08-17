@@ -138,3 +138,13 @@ def user_login(request):
 def user_logout(request):
     logout(request)
     return redirect('home')
+
+
+def video_list(request):
+    query = request.GET.get('q', '')  # 기본값을 빈 문자열로 설정
+    if query:
+        videos = Video.objects.filter(title__icontains=query)
+    else:
+        videos = Video.objects.all()
+    
+    return render(request, 'video.html', {'videos': videos, 'query': query})

@@ -1,5 +1,7 @@
 from django.urls import path
 from . import views  # 뷰를 가져옵니다
+from .views import video_list
+
 
 urlpatterns = [
     path('', views.home, name='home'),  # 홈 페이지
@@ -18,5 +20,5 @@ urlpatterns = [
     path('signup/', views.signup, name='signup'),
     path('login/', views.user_login, name='login'),
     path('logout/', views.user_logout, name='logout'),
-
+    path('videos/', video_list, name='video_list'),
 ]
