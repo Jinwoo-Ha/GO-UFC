@@ -4,6 +4,11 @@ from django.contrib.auth.decorators import login_required
 from .models import Post, Comment, Video
 from .forms import PostForm, CommentForm
 from .models import Fighter
+from django.contrib.auth import login, authenticate
+from .forms import SignUpForm
+from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth import logout
+from .forms import SignUpForm, CustomAuthenticationForm
 
 
 def home(request):
@@ -100,3 +105,36 @@ def fighter_detail(request, fighter_id):
     fighter = get_object_or_404(Fighter, id=fighter_id)
     return render(request, 'fighter_detail.html', {'fighter': fighter})
 
+#회원가입 및 로그인/로그아웃
+def signup(request):
+    if request.method == 'POST':
+        form = SignUpForm(request.POST)
+        if form.is_valid():
+            form.save()
+            username = form.cleaned_data.get('username')
+            raw_password = form.cleaned_data.get('password1')
+            user = authenticate(username=username, password=raw_password)
+            login(request, user)
+            return redirect('home')
+    else:
+        form = SignUpForm()
+    return render(request, 'signup.html', {'form': form})
+
+def user_login(request):
+    if request.method == 'POST':
+        form = CustomAuthenticationForm(request, data=request.POST)
+        if form.is_valid():
+            username = form.cleaned_data.get('username')
+            password = form.cleaned_data.get('password')
+            user = authenticate(username=username, password=password)
+            if user is not None:
+                login(request, user)
+                return redirect('home')
+    else:
+        form = CustomAuthenticationForm()
+    return render(request, 'login.html', {'form': form})
+
+
+def user_logout(request):
+    logout(request)
+    return redirect('home')

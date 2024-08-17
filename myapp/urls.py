@@ -15,6 +15,8 @@ urlpatterns = [
     path('videos/', views.video_list, name='videos'),
     path('search/', views.search_results, name='search_results'),
     path('fighter/<int:fighter_id>/', views.fighter_detail, name='fighter_detail'),
-
+    path('signup/', views.signup, name='signup'),
+    path('login/', views.user_login, name='login'),
+    path('logout/', views.user_logout, name='logout'),
 
 ]

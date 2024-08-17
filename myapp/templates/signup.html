@@ -1,0 +1,121 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<style>
+    .auth-form-container {
+        max-width: 400px;
+        margin: 100px auto;
+        padding: 40px;
+        background-color: #1a1a1a;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .auth-form h2 {
+        margin-bottom: 30px;
+        color: #ffffff;
+        text-align: center;
+        font-size: 28px;
+    }
+
+    .auth-form .form-group {
+        margin-bottom: 25px;
+    }
+
+    .auth-form label {
+        display: block;
+        text-align: left;
+        margin-bottom: 8px;
+        color: #ffffff;
+        font-size: 16px;
+    }
+
+    .auth-form .input-wrapper {
+        width: 100%;
+    }
+
+    .auth-form input[type="text"],
+    .auth-form input[type="password"],
+    .auth-form input[type="email"] {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #333;
+        border-radius: 4px;
+        background-color: #2a2a2a;
+        color: #fff;
+        font-size: 16px;
+    }
+
+    .auth-form button {
+        width: 60%;
+        padding: 12px;
+        background-color: #3498db;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 18px;
+        transition: background-color 0.3s;
+        margin-top: 20px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .auth-form button:hover {
+        background-color: #2980b9;
+    }
+
+    .auth-form p {
+        margin-top: 25px;
+        text-align: center;
+        color: #888;
+        font-size: 16px;
+    }
+
+    .auth-form a {
+        color: #3498db;
+        text-decoration: none;
+    }
+
+    .auth-form a:hover {
+        text-decoration: underline;
+    }
+</style>
+
+<div class="auth-form-container">
+    <form method="post" class="auth-form">
+        <h2>Sign Up</h2>
+        {% csrf_token %}
+        <div class="form-group">
+            {{ form.username.label_tag }}
+            <div class="input-wrapper">
+                {{ form.username }}
+            </div>
+        </div>
+        <div class="form-group">
+            {{ form.email.label_tag }}
+            <div class="input-wrapper">
+                {{ form.email }}
+            </div>
+        </div>
+        <div class="form-group">
+            {{ form.password1.label_tag }}
+            <div class="input-wrapper">
+                {{ form.password1 }}
+            </div>
+        </div>
+        <div class="form-group">
+            {{ form.password2.label_tag }}
+            <div class="input-wrapper">
+                {{ form.password2 }}
+            </div>
+        </div>
+        <button type="submit">Sign Up</button>
+        <p>Already have an account? <a href="{% url 'login' %}">Login</a></p>
+    </form>
+</div>
+
+{% endblock %}
