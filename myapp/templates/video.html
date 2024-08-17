@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}UFC Videos{% endblock %}
+
+{% block content %}
+<style>
+    .category-menu {
+        display: flex;
+        justify-content: flex-end; /* 버튼을 오른쪽에 정렬 */
+        margin-bottom: 20px;
+    }
+    .category-menu button {
+        margin: 0 15px;
+        padding: 10px 20px;
+        background-color: #161616;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: not-allowed; /* 클릭 불가능한 커서 */
+    }
+    .category-menu button:hover {
+        background-color: #333;
+    }
+    .video-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        padding: 20px;
+    }
+    .video-item {
+        background-color: #161616;
+        border-radius: 10px;
+        overflow: hidden;
+        transition: transform 0.3s ease;
+        border: 1px solid #333;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .video-item:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+    .video-thumbnail {
+        width: 100%;
+        height: 0;
+        padding-bottom: 56.25%;
+        position: relative;
+        margin-bottom: 10px;
+    }
+    .video-thumbnail iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px 10px 0 0;
+    }
+    .video-info {
+        padding: 10px;
+        text-align: left;
+    }
+    .video-title {
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+    .video-description {
+        font-size: 14px;
+        color: #aaa;
+    }
+</style>
+
+<h1>UFC Videos</h1>
+
+<div class="category-menu">
+    <button>New</button>
+    <button>Hot</button>
+    <button>Recommend</button>
+</div>
+
+<div class="video-container">
+    {% for video in videos %}
+        <div class="video-item">
+            <div class="video-thumbnail">
+                <iframe src="https://www.youtube.com/embed/{{ video.youtube_id }}" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="video-info">
+                <div class="video-title">{{ video.title }}</div>
+                <div class="video-description">{{ video.description }}</div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}

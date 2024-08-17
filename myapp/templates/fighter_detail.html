@@ -1,0 +1,188 @@
+{% extends "base.html" %}
+
+{% block title %}{{ fighter.name }} - Details{% endblock %}
+
+{% block content %}
+<style>
+    body {
+        background-color: #000; /* 전체 배경색을 검정색으로 설정 */
+        font-family: 'Noto Sans', sans-serif;
+        color: #fff; /* 기본 텍스트 색상을 흰색으로 설정 */
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .fighter-profile {
+        display: flex;
+        background-color: #222; /* 카드 배경색을 짙은 회색으로 설정 */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    .fighter-photo {
+        flex: 1;
+        background-color: #444;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .fighter-photo img {
+        width: 100%; /* 이미지의 너비를 부모 요소에 맞춤 */
+        height: 370px; /* 이미지의 높이를 고정 */
+        object-fit: cover; /* 이미지가 지정된 크기에 맞게 자르거나 확대 */
+        border-radius: 8px; /* 사진에도 라운드 효과 추가 */
+    }
+
+    .fighter-nickname {
+        margin-top: 13px;
+        font-size: 24px;
+        font-weight: bold;
+        color: #ffffff; /* 닉네임 색상을 흰색으로 설정 */
+    }
+
+    .fighter-info {
+        flex: 2;
+        padding: 30px;
+    }
+
+    .fighter-info h1 {
+        font-size: 40px;
+        margin-bottom: 20px;
+        color: #fff;
+    }
+
+    .fighter-tags {
+        margin-bottom: 15px;
+        overflow: hidden; /* 불필요한 영역을 숨기기 */
+    }
+
+    .fighter-tags span {
+        display: inline-block;
+        color: #bbb;
+        font-size: 14px;
+        border-radius: 3px;
+        vertical-align: middle; /* 수직 가운데 정렬 */
+        box-sizing: border-box; /* box-sizing 설정 */
+    }
+
+    .fighter-record {
+        font-size: 18px;
+        font-weight: bold;
+        color: #bbb;
+        margin-bottom: 20px;
+    }
+
+    .bio-section {
+        margin-top: 30px;
+    }
+
+    .bio-section h2 {
+        font-size: 28px;
+        margin-bottom: 15px;
+        color: #ff0000; /* 소제목 색상을 빨간색으로 설정 */
+    }
+
+    .bio-section .bio-detail {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 0;
+        border-bottom: 1px solid #555;
+    }
+
+    .bio-section .bio-label {
+        font-weight: bold;
+        font-size: 18px;
+        color: #fff;
+    }
+
+    .bio-section .bio-value {
+        font-size: 18px;
+        color: #bbb;
+    }
+
+    .fighter-bio, .fighter-highlights {
+        background-color: #222;
+        padding: 20px;
+        margin-top: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        border-radius: 8px;
+    }
+
+    .fighter-bio h2, .fighter-highlights h2 {
+        font-size: 28px;
+        margin-bottom: 15px;
+        color: #ff0000; /* 소제목 색상을 빨간색으로 설정 */
+    }
+
+    .fighter-bio p, .fighter-highlights p {
+        font-size: 16px;
+        line-height: 1.6;
+        color: #ccc;
+        text-align: left; /* 텍스트를 왼쪽 정렬 */
+    }
+
+    .fighter-bio p strong, .fighter-highlights p strong {
+        font-weight: bold; /* 강한 강조를 위해 볼드체로 설정 */
+    }
+</style>
+
+<div class="container">
+    <div class="fighter-profile">
+        <div class="fighter-photo">
+            <img src="{{ fighter.photo.url }}" alt="{{ fighter.name }}">
+            {% if fighter.nickname %}
+            <div class="fighter-nickname">"{{ fighter.nickname }}"</div>
+            {% endif %}
+        </div>
+        <div class="fighter-info">
+            <h1>{{ fighter.name }}</h1>
+            <div class="fighter-tags">
+                <span class="custom-button">{{ fighter.weight_class }} Division</span>
+                <span class="custom-button">{{ fighter.status }}</span>
+            </div>
+            <div class="fighter-record">
+                {{ fighter.record }} (W-L-D)
+            </div>
+
+            <div class="bio-section">
+                <h2>Bio</h2>
+                <div class="bio-detail">
+                    <div class="bio-label">Status:</div>
+                    <div class="bio-value">{{ fighter.status }}</div>
+                </div>
+                <div class="bio-detail">
+                    <div class="bio-label">Hometown:</div>
+                    <div class="bio-value">{{ fighter.hometown }}</div>
+                </div>
+                <div class="bio-detail">
+                    <div class="bio-label">Age:</div>
+                    <div class="bio-value">{{ fighter.age }}</div>
+                </div>
+                <div class="bio-detail">
+                    <div class="bio-label">Height:</div>
+                    <div class="bio-value">{{ fighter.height }}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fighter-bio">
+        <h2>Fighter Bio</h2>
+        <p>{{ fighter.biography|safe }}</p>
+    </div>
+
+    <div class="fighter-highlights">
+        <h2>Career Highlights</h2>
+        <p>{{ fighter.career_highlights|linebreaksbr|safe }}</p>
+    </div>
+</div>
+{% endblock %}

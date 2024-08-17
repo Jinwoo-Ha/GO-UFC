@@ -1,0 +1,125 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Community - Finance Data Masking AI{% endblock %}
+
+{% block content %}
+<style>
+    .board {
+        width: 90%;
+        margin: 20px auto;
+        background-color: #161616;
+        border-radius: 8px;
+        padding: 20px;
+    }
+    .new-post-button-container {
+        width: 90%; /* 글 목록 영역과 맞추기 위해 컨테이너 너비 설정 */
+        margin: 0 auto 20px auto;
+        display: flex;
+        justify-content: flex-end; /* 오른쪽 정렬 */
+    }
+    .new-post-button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    .post {
+        background-color: #222;
+        margin-bottom: 20px;
+        padding: 15px;
+        border-radius: 5px;
+    }
+    .post-title {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        text-align: left; /* 제목을 왼쪽 정렬 */
+    }
+    .post-title a {
+        color: #fff; /* 링크 색상을 흰색으로 변경 */
+        font-weight: bold; /* 볼드체 적용 */
+        text-decoration: none; /* 밑줄 제거 */
+    }
+    .post-title a:hover {
+        color: #ccc; /* 마우스를 올릴 때 색상을 조금 연하게 */
+    }
+    .post-content {
+        margin-bottom: 10px;
+        text-align: left;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box; /* Flexbox와 비슷한 동작을 하는 WebKit/Blink 전용 속성 */
+        -webkit-box-orient: vertical; /* Flexbox의 방향을 세로로 설정 */
+        -webkit-line-clamp: 2; /* WebKit/Blink 전용: 2줄로 내용 제한 */
+        line-clamp: 2; /* 표준 문법 (아직 대부분의 브라우저에서 지원되지 않음) */
+        /* line-clamp를 지원하지 않는 브라우저를 위한 대체 방법 */
+        max-height: 3em; /* 두 줄의 텍스트 높이를 기준으로 최대 높이 설정 */
+    }
+    .post-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 12px; /* 글씨 크기를 더 작게 설정 */
+        color: #aaa; /* 텍스트 색상을 연한 회색으로 설정 */
+    }
+    .like-button, .comment-button {
+        background-color: #444;
+        color: #fff;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+    .pagination {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+    .pagination a {
+        margin: 0 5px;
+        padding: 5px 10px;
+        background-color: #333;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 3px;
+    }
+</style>
+
+<h1>Community Board</h1>
+
+<div class="new-post-button-container">
+    <a href="{% url 'post_create' %}" class="new-post-button">Create New Post</a>
+</div>
+
+<div class="board">
+    {% for post in posts %}
+    <div class="post">
+        <div class="post-title"><a href="{% url 'post_detail' pk=post.pk %}">&lt;{{ post.title }}&gt;</a></div> <!-- 제목을 흰색 볼드체로 설정하고 <> 형식으로 감쌈 -->
+        <div class="post-content">{{ post.content|truncatechars:50 }}</div> <!-- 내용은 50자로 제한 -->
+        <div class="post-footer">
+            <p>Posted by {{ post.author }} on {{ post.created_at|date:"M. d, Y, P" }}</p>
+            <p>Likes: {{ post.likes.count }}</p>
+        </div>
+    </div>
+    {% empty %}
+    <p>No posts yet.</p>
+    {% endfor %}
+</div>
+
+<div class="pagination">
+    {% if posts.has_previous %}
+    <a href="?page={{ posts.previous_page_number }}">&laquo; Previous</a>
+    {% endif %}
+    
+    <span>Page {{ posts.number }} of {{ posts.paginator.num_pages }}</span>
+    
+    {% if posts.has_next %}
+    <a href="?page={{ posts.next_page_number }}">Next &raquo;</a>
+    {% endif %}
+</div>
+{% endblock %}

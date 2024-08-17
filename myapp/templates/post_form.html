@@ -1,0 +1,117 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Create New Post{% endblock %}
+
+{% block content %}
+<style>
+    .form-container {
+        width: 60%;
+        margin: 40px auto;
+        background-color: #161616;
+        border-radius: 8px;
+        padding: 30px;
+        color: #ddd;
+    }
+    .form-container h2 {
+        color: #fff;
+        font-size: 24px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .form-container form {
+        display: flex;
+        flex-direction: column;
+    }
+    .form-container form .form-group {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        padding-right: 180px;
+    }
+    .form-container form .form-group label {
+        width: 20%;
+        color: #bbb;
+        font-size: 16px;
+    }
+    .form-container form .form-group input[type="text"],
+    .form-container form .form-group textarea {
+        width: 80%;
+        padding: 10px;
+        background-color: transparent;
+        border: 2px solid #fff;
+        border-radius: 5px;
+        color: #fff;
+        font-size: 16px;
+    }
+    .form-container form .form-group input::placeholder,
+    .form-container form .form-group textarea::placeholder {
+        color: #bbb;
+    }
+    .form-container form .file-input-wrapper {
+        position: relative;
+        width: 80%;
+    }
+    .form-container form .file-input-wrapper input[type="file"] {
+        opacity: 0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+    }
+    .form-container form .file-input-wrapper .file-label {
+        display: block;
+        padding: 10px;
+        background-color: #222;
+        border: 2px solid #fff;
+        border-radius: 5px;
+        text-align: center;
+        cursor: pointer;
+        color: #ddd;
+    }
+    .form-container form button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-top: 20px;
+        align-self: center; 
+    }
+    .form-container form button:hover {
+        background-color: #45a049;
+    }
+</style>
+
+<div class="form-container">
+    <h2>Create New Post</h2>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="id_title">{{ form.title.label }}</label>
+            {{ form.title }}
+        </div>
+        <div class="form-group">
+            <label for="id_content">{{ form.content.label }}</label>
+            {{ form.content }}
+        </div>
+        <div class="form-group">
+            <label for="id_image">{{ form.image.label }}</label>
+            <div class="file-input-wrapper">
+                <input type="file" id="id_image" name="{{ form.image.name }}">
+                <span class="file-label">Select Image File</span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="id_video">{{ form.video.label }}</label>
+            <div class="file-input-wrapper">
+                <input type="file" id="id_video" name="{{ form.video.name }}">
+                <span class="file-label">Select Video File</span>
+            </div>
+        </div>
+        <button type="submit">Post</button>
+    </form>
+</div>
+{% endblock %}

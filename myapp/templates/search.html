@@ -1,0 +1,232 @@
+{% extends "base.html" %}
+
+{% block title %}Search UFC Fighters{% endblock %}
+
+{% block content %}
+<style>
+.container {
+    max-width: 100%;
+    padding: 50px 5%;
+    margin-top: 0px;
+}
+.search-container {
+    border-radius: 10px;
+    padding: 40px;
+    margin-bottom: 100px;
+}
+.search-container h2 {
+    font-size: 38px; /* Increased font size */
+    margin-bottom: 30px;
+    text-align: center;
+    color: #e6e6e6;
+}
+.search-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search-form input[type="text"] {
+    width: 70%;
+    padding: 15px 20px;
+    font-size: 20px; /* Increased font size */
+    border: none;
+    border-radius: 30px 0 0 30px;
+    background-color: #333;
+    color: #fff;
+}
+.search-form button {
+    background-color: #d20a0a;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 0 30px 30px 0;
+    cursor: pointer;
+    font-size: 20px; /* Increased font size */
+    transition: background-color 0.3s ease;
+}
+.search-form button:hover {
+    background-color: #ff0000;
+}
+.results {
+    max-width: 70%;
+    margin: 40px auto 0;
+}
+.results h2{
+    font-size: 18px;
+    font-weight: lighter;
+    color: #bcbcbc;
+    text-align: end;
+}
+.results a {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit the text color from the parent element */
+}
+.results a:hover {
+    color: inherit; /* Ensure the color remains unchanged on hover */
+}
+.popular-fighters a {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit the text color from the parent element */
+}
+.popular-fighters a:hover {
+    color: inherit; /* Ensure the color remains unchanged on hover */
+}
+.fighter {
+    background: linear-gradient(135deg, #2c2c2c, #1a1a1a);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: flex-start;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #333;
+    cursor: pointer;
+}
+.fighter:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255, 0, 0, 0.2);
+}
+.fighter img {
+    border-radius: 10px;
+    width: 150px;
+    height: 200px;
+    object-fit: cover;
+    margin-right: 30px;
+}
+.fighter-details {
+    flex: 1;
+    text-align: left; /* Ensure all text in details is left-aligned */
+}
+.fighter h3 {
+    margin: 0; /* Remove margin for alignment */
+    padding-bottom: 5px; /* Add some spacing below */
+    font-size: 35px; /* Increased font size */
+    color: #e6e6e6;
+    text-align: left; /* Ensure text is left-aligned */
+}
+.fighter p {
+    margin: 5px 0;
+    font-size: 20px; /* Increased font size */
+    color: #b3b3b3;
+}
+.fighter-description {
+    font-size: 18px; /* Increased font size */
+    color: #999;
+    margin-top: 10px;
+    line-height: 1.6;
+}
+.popular-fighters h2 {
+    font-size: 34px; /* Increased font size */
+    margin-bottom: 30px;
+    text-align: center;
+    color: #e6e6e6;
+}
+.fighter-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3열로 설정 */
+    gap: 30px;
+}
+.fighter-card {
+    background: linear-gradient(135deg, #2c2c2c, #1a1a1a);
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #333;
+    display: flex;
+    flex-direction: column;
+    height: 520px;
+}
+.fighter-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255, 0, 0, 0.2);
+}
+.fighter-card img {
+    border-radius: 10px;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+.fighter-card h3 {
+    font-size: 26px; /* Increased font size */
+    margin-bottom: 15px;
+    color: #e6e6e6;
+    text-align: left; /* Ensure text is left-aligned */
+}
+.fighter-card p {
+    font-size: 18px; /* Increased font size */
+    margin: 10px 0;
+    color: #b3b3b3;
+    text-align: left; /* Ensure text is left-aligned */
+}
+.fighter-card .fighter-description {
+    font-size: 18px; /* Increased font size */
+    color: #999;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: left; /* Ensure text is left-aligned */
+}
+
+</style>
+
+<div class="container">
+    <div class="search-container">
+        <h2>Search UFC Fighters</h2>
+        <form class="search-form" method="GET" action="{% url 'search_results' %}">
+            <input type="text" name="q" placeholder="Enter fighter name..." required>
+            <button type="submit">Search</button>
+        </form>
+
+        {% if query %}
+        <div class="results">
+            <h2>Search Results for "{{ query }}":</h2>
+            {% if fighters %}
+                {% for fighter in fighters %}
+                <a href="{% url 'fighter_detail' fighter.id %}">
+                    <div class="fighter">
+                        {% if fighter.photo %}
+                        <img src="{{ fighter.photo.url }}" alt="{{ fighter.name }}">
+                        {% endif %}
+                        <div class="fighter-details">
+                            <h3>{{ fighter.name }}</h3>
+                            <p><strong>Weight Class:</strong> {{ fighter.weight_class }}</p>
+                            <p><strong>Record:</strong> {{ fighter.record }}</p>
+                            {% if fighter.description %}
+                            <p class="fighter-description">{{ fighter.description|slice:":50" }}{% if fighter.description|length > 50 %}...{% endif %}</p>
+                            {% endif %}
+                        </div>
+                    </div>
+                </a>
+                {% endfor %}
+            {% else %}
+                <p>No fighters found matching your search criteria.</p>
+            {% endif %}
+        </div>
+        {% endif %}
+    </div>
+
+    <div class="popular-fighters">
+        <h2>Popular UFC Fighters</h2>
+        <div class="fighter-cards">
+            {% for fighter in popular_fighters|slice:":21" %} <!-- 최대 21명 표시 -->
+            <a href="{% url 'fighter_detail' fighter.id %}">
+                <div class="fighter-card">
+                    {% if fighter.photo %}
+                    <img src="{{ fighter.photo.url }}" alt="{{ fighter.name }}">
+                    {% endif %}
+                    <h3>{{ fighter.name }}</h3>
+                    <p><strong>Weight Class:</strong> {{ fighter.weight_class }}</p>
+                    <p><strong>Record:</strong> {{ fighter.record }}</p>
+                    {% if fighter.description %}
+                    <p class="fighter-description">{{ fighter.description|slice:":50" }}{% if fighter.description|length > 50 %}...{% endif %}</p>
+                    {% endif %}
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+    
+</div>
+{% endblock %}
