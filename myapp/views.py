@@ -160,3 +160,8 @@ def vote_match(request, match_id):
         )
         
     return redirect('upcoming_events')
+
+
+# 채팅방 기능 
+def chatroom(request):
+    return render(request, 'chatroom.html')

@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Chat Room</h2>
+<div id="chat-messages" style="height: 300px; overflow-y: scroll; border: 1px solid #ccc; padding: 10px; margin-bottom: 10px;"></div>
+<input type="text" id="chat-message-input" placeholder="Type a message..." style="width: 70%; padding: 5px;">
+<button id="chat-message-submit" style="padding: 5px 10px;">Send</button>
+<script>
+    const currentUser = "{{ request.user.username }}";
+    const chatSocket = new WebSocket(
+        'ws://' + window.location.host + '/ws/chat/'
+    );
+    let messageCounter = 0;
+
+    chatSocket.onopen = function(e) {
+        console.log("WebSocket 연결 성공");
+        addMessageToChat("System", "채팅방에 연결되었습니다.");
+    };
+
+    chatSocket.onerror = function(e) {
+        console.error("WebSocket 오류 발생:", e);
+        addMessageToChat("System", "연결 오류가 발생했습니다. 페이지를 새로고침 해주세요.");
+    };
+
+    chatSocket.onclose = function(e) {
+        console.log("WebSocket 연결 종료");
+        addMessageToChat("System", "채팅방 연결이 종료되었습니다.");
+    };
+
+    chatSocket.onmessage = function(e) {
+        console.log("메시지 수신:", e.data);
+        const data = JSON.parse(e.data);
+        addMessageToChat(data.sender === currentUser ? "Me" : data.sender, data.message);
+    };
+
+    document.querySelector('#chat-message-submit').onclick = sendMessage;
+    document.querySelector('#chat-message-input').onkeyup = function(e) {
+        if (e.key === 'Enter') {
+            sendMessage();
+        }
+    };
+
+    function sendMessage() {
+        const messageInputDom = document.querySelector('#chat-message-input');
+        const message = messageInputDom.value;
+        if (message.trim() !== '') {
+            const messageId = `${currentUser}-${messageCounter++}`;
+            chatSocket.send(JSON.stringify({
+                'sender': currentUser,
+                'message': message,
+                'id': messageId
+            }));
+            messageInputDom.value = '';
+        }
+    }
+
+    function addMessageToChat(sender, message) {
+        const messageDisplay = document.getElementById('chat-messages');
+        const messageElement = document.createElement('p');
+        messageElement.textContent = `${sender}: ${message}`;
+        messageDisplay.appendChild(messageElement);
+        messageDisplay.scrollTop = messageDisplay.scrollHeight;
+    }
+</script>
+{% endblock %}
