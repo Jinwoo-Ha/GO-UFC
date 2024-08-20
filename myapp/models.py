@@ -81,3 +81,7 @@ class Vote(models.Model):
 
     def __str__(self):
         return f"{self.user} voted for {self.chosen_fighter} in {self.match}"
+    
+
+    
+
