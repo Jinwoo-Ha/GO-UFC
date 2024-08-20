@@ -1,0 +1,233 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Upcoming UFC Events{% endblock %}
+
+{% block content %}
+<div class="upcoming-events-container">
+    <h1 class="page-title">Upcoming UFC Events</h1>
+    
+    {% for event in events %}
+    <div class="event-card">
+        <div class="event-header">
+            <h2 class="event-title">{{ event.title }}</h2>
+            <p class="event-date">{{ event.date|date:"F d, Y" }} &bull; {{ event.location }}</p>
+        </div>
+        
+        <div class="matches-container">
+            {% for match in event.matches_list %}
+            <div class="match-card">
+                <div class="fighter fighter-left">
+                    <form method="post" action="{% url 'vote_match' match.id %}">
+                        {% csrf_token %}
+                        <button type="submit" name="vote" value="{{ match.fighter1.id }}" class="fighter-btn">
+                            <img src="{{ match.fighter1.photo.url }}" alt="{{ match.fighter1.name }}" class="fighter-img {% if match.fighter1_votes > match.fighter2_votes %}leading{% endif %}">
+                            <div class="fighter-details">
+                                <h3 class="fighter-name">{{ match.fighter1.name }}</h3>
+                                <p class="vote-count">{{ match.fighter1_votes }} votes</p>
+                            </div>
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="vs-section">
+                    <span class="vs">VS</span>
+                </div>
+                
+                <div class="fighter fighter-right">
+                    <form method="post" action="{% url 'vote_match' match.id %}">
+                        {% csrf_token %}
+                        <button type="submit" name="vote" value="{{ match.fighter2.id }}" class="fighter-btn">
+                            <img src="{{ match.fighter2.photo.url }}" alt="{{ match.fighter2.name }}" class="fighter-img {% if match.fighter2_votes > match.fighter1_votes %}leading{% endif %}">
+                            <div class="fighter-details">
+                                <h3 class="fighter-name">{{ match.fighter2.name }}</h3>
+                                <p class="vote-count">{{ match.fighter2_votes }} votes</p>
+                            </div>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<style>
+    :root {
+        --primary-color: #d20a0a;
+        --secondary-color: #f0f0f0;
+        --background-color: #121212;
+        --card-background: #1e1e1e;
+        --text-color: #ffffff;
+        --text-secondary: #ffffff;
+    }
+
+    body {
+        background-color: black;
+        color: var(--text-color);
+        font-family: 'Roboto', 'Arial', sans-serif;
+        line-height: 1.6;
+    }
+
+    .upcoming-events-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+    }
+
+    .page-title {
+        text-align: center;
+        font-size: 2.8em;
+        font-weight: 700;
+        margin-bottom: 40px;
+        color: #e6e6e6;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    .event-card {
+        background-color: var(--card-background);
+        border-radius: 15px;
+        overflow: hidden;
+        margin-bottom: 40px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease;
+    }
+
+    .event-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .event-header {
+        background-color: var(--primary-color);
+        padding: 20px;
+        color: var(--secondary-color);
+    }
+
+    .event-title {
+        font-size: 2.5em;
+        margin: 0;
+        font-weight: 600;
+    }
+
+    .event-date {
+        font-size: 1.3em;
+        margin: 5px 0 0;
+        opacity: 0.9;
+    }
+
+    .matches-container {
+        padding: 20px;
+    }
+
+    .match-card {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.05);
+        border-radius: 10px;
+        padding: 20px;
+        margin-bottom: 20px;
+        transition: background-color 0.3s ease;
+    }
+
+    .match-card:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .fighter {
+        flex: 1;
+        text-align: center;
+    }
+
+    .fighter-btn {
+        background: none;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        transition: transform 0.3s ease;
+    }
+
+    .fighter-btn:hover {
+        transform: scale(1.05);
+    }
+
+    .fighter-img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 4px solid #ffffff;  /* Default white border */
+        transition: border-color 0.3s ease;
+    }
+
+    .fighter-img.leading {
+        border-color: var(--primary-color);  /* Red border for leading fighter */
+    }
+
+    .fighter-btn:hover .fighter-img {
+        border-color: var(--secondary-color);
+    }
+
+    .fighter-details {
+        margin-top: 15px;
+    }
+
+    .fighter-name {
+        font-size: 1.8em;
+        margin: 10px 0 5px;
+        font-weight: 600;
+        color: var(--text-color);
+    }
+
+    .vote-count {
+        font-size: 1.2em;
+        color: var(--text-secondary);
+    }
+
+    .vs-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100px;
+    }
+
+    .vs {
+        font-size: 2.2em;
+        font-weight: 700;
+        color: var(--primary-color);
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 0 15px rgba(210, 10, 10, 0.3);
+    }
+
+    @media (max-width: 768px) {
+        .match-card {
+            flex-direction: column;
+        }
+
+        .vs-section {
+            margin: 20px 0;
+        }
+
+        .fighter-img {
+            width: 160px;
+            height: 160px;
+        }
+
+        .fighter-name {
+            font-size: 1.5em;
+        }
+
+        .vote-count {
+            font-size: 1em;
+        }
+    }
+</style>
+{% endblock %}

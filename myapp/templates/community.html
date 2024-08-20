@@ -5,6 +5,10 @@
 
 {% block content %}
 <style>
+    #title_id{
+        font-size: 2.8em;  /* Increased size */
+
+    }
     .board {
         width: 90%;
         margin: 20px auto;
@@ -34,7 +38,7 @@
         border-radius: 5px;
     }
     .post-title {
-        font-size: 18px;
+        font-size: 22px;
         font-weight: bold;
         margin-bottom: 10px;
         text-align: left; /* 제목을 왼쪽 정렬 */
@@ -90,7 +94,7 @@
     }
 </style>
 
-<h1>Community Board</h1>
+<h1 id = "title_id">Community Board</h1>
 
 <div class="new-post-button-container">
     <a href="{% url 'post_create' %}" class="new-post-button">Create New Post</a>

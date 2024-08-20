@@ -63,34 +63,55 @@
         transform: scale(1.05); /* 호버 시 이미지를 약간 확대 */
         box-shadow: 0 5px 15px rgba(0,0,0,0.3); /* 호버 시 그림자 효과 추가 */
     }
+
+    .featured-item a {
+    display: block;
+    text-decoration: none;
+    color: var(--text-color);
+    }
+
     .featured-item h3 {
-        margin-bottom: 0.5rem;
+        font-size: 1.5em;
+        margin: 15px;
+        color: var(--primary-color);
+    }
+
+    .featured-item p {
+        font-size: 1em;
+        margin: 0 15px 15px;
+        color: var(--text-color);  /* 변경된 부분: var(--text-secondary)에서 var(--text-color)로 */
     }
 </style>
 
 <div class="hero">
     <div class="hero-content">
         <h1>Welcome to Go UFC</h1>
-        <p>Experience the world's premier mixed martial arts platform</p>
-        <a href="#" class="cta-button">Watch Live Events</a>
+        <p>Experience the world's premier mixed martial arts Korean platform</p>
+        <a href="{% url 'community' %}" class="cta-button">Browse Community</a>
     </div>
 </div>
 
 <div class="featured-section">
     <div class="featured-item">
-        <img src="{% static 'upcoming-event.jpg' %}" alt="Upcoming Event">
-        <h3>Upcoming Event</h3>
-        <p>Don't miss our next thrilling fight night!</p>
+        <a href="{% url 'upcoming_events' %}">
+            <img src="{% static 'upcoming-event.jpg' %}" alt="Upcoming Event">
+            <h3>Upcoming Event</h3>
+            <p>Don't miss our next thrilling fight night!</p>
+        </a>
     </div>
     <div class="featured-item">
-        <img src="{% static 'Top Fighters.jpg' %}" alt="Top Fighters">
-        <h3>Top Fighters</h3>
-        <p>Meet the champions dominating the octagon</p>
+        <a href="{% url 'search_results' %}">
+            <img src="{% static 'Top Fighters.jpg' %}" alt="Top Fighters">
+            <h3>Top Fighters</h3>
+            <p>Meet the champions dominating the octagon</p>
+        </a>
     </div>
     <div class="featured-item">
-        <img src="{% static 'news.jpeg' %}" alt="Latest News">
-        <h3>Latest News</h3>
-        <p>Stay updated with UFC news and announcements</p>
+        <a href="{% url 'video_list' %}">
+            <img src="{% static 'news.jpeg' %}" alt="Latest News">
+            <h3>Latest Highlights</h3>
+            <p>Watch recent match highlights</p>
+        </a>
     </div>
 </div>
 {% endblock %}

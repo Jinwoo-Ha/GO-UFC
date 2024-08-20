@@ -1,27 +1,25 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.core.paginator import Paginator
 from django.contrib.auth.decorators import login_required
-from .models import Post, Comment, Video
-from .forms import PostForm, CommentForm
-from .models import Fighter
-from django.contrib.auth import login, authenticate
-from .forms import SignUpForm
-from django.contrib.auth.forms import AuthenticationForm
-from django.contrib.auth import logout
-from .forms import SignUpForm, CustomAuthenticationForm
-
+from django.contrib.auth import login, authenticate, logout
+from django.utils import timezone
+from .models import Post, Comment, Video, Fighter, Event, Match, Vote
+from .forms import PostForm, CommentForm, SignUpForm, CustomAuthenticationForm
 
 def home(request):
     return render(request, 'home.html')
 
-
 def video_list(request):
-    videos = Video.objects.all().order_by('-created_at')[:15]
-    return render(request, 'video.html', {'videos': videos})
+    query = request.GET.get('q', '')
+    if query:
+        videos = Video.objects.filter(title__icontains=query)
+    else:
+        videos = Video.objects.all().order_by('-created_at')[:15]
+    return render(request, 'video.html', {'videos': videos, 'query': query})
 
 def community(request):
     posts = Post.objects.all().order_by('-created_at')
-    paginator = Paginator(posts, 15)  # 15 posts per page
+    paginator = Paginator(posts, 15)
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
     return render(request, 'community.html', {'posts': page_obj})
@@ -87,14 +85,10 @@ def add_comment(request, pk):
         form = CommentForm()
     return render(request, 'add_comment.html', {'form': form, 'post': post})
 
-
 def search_results(request):
     query = request.GET.get('q')
     fighters = Fighter.objects.filter(name__icontains=query) if query else None
-    
-    # 인기 있는 UFC 파이터 목록 (예시로 상위 6명 가져오기)
     popular_fighters = Fighter.objects.all()[:6]
-    
     return render(request, 'search.html', {
         'fighters': fighters,
         'query': query,
@@ -105,7 +99,6 @@ def fighter_detail(request, fighter_id):
     fighter = get_object_or_404(Fighter, id=fighter_id)
     return render(request, 'fighter_detail.html', {'fighter': fighter})
 
-#회원가입 및 로그인/로그아웃
 def signup(request):
     if request.method == 'POST':
         form = SignUpForm(request.POST)
@@ -134,17 +127,36 @@ def user_login(request):
         form = CustomAuthenticationForm()
     return render(request, 'login.html', {'form': form})
 
-
 def user_logout(request):
     logout(request)
     return redirect('home')
 
+# 새로 추가된 함수들
 
-def video_list(request):
-    query = request.GET.get('q', '')  # 기본값을 빈 문자열로 설정
-    if query:
-        videos = Video.objects.filter(title__icontains=query)
-    else:
-        videos = Video.objects.all()
+def upcoming_events(request):
+    events = Event.objects.filter(date__gte=timezone.now()).order_by('date')[:5]
     
-    return render(request, 'video.html', {'videos': videos, 'query': query})
+    for event in events:
+        event.matches_list = event.matches.all()
+        for match in event.matches_list:
+            match.fighter1_votes = match.votes.filter(chosen_fighter=match.fighter1).count()
+            match.fighter2_votes = match.votes.filter(chosen_fighter=match.fighter2).count()
+    
+    return render(request, 'upcoming.html', {'events': events})
+
+
+
+@login_required
+def vote_match(request, match_id):
+    if request.method == 'POST':
+        match = get_object_or_404(Match, id=match_id)
+        fighter_id = request.POST.get('vote')
+        fighter = get_object_or_404(Fighter, id=fighter_id)
+        
+        vote, created = Vote.objects.update_or_create(
+            user=request.user,
+            match=match,
+            defaults={'chosen_fighter': fighter}
+        )
+        
+    return redirect('upcoming_events')

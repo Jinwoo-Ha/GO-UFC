@@ -21,4 +21,6 @@ urlpatterns = [
     path('login/', views.user_login, name='login'),
     path('logout/', views.user_logout, name='logout'),
     path('videos/', video_list, name='video_list'),
+    path('upcoming/', views.upcoming_events, name='upcoming_events'),
+    path('vote/<int:match_id>/', views.vote_match, name='vote_match'),
 ]
