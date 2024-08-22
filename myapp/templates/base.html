@@ -157,11 +157,11 @@
                 <img src="{% static 'logo9.png' %}" alt="Logo">
             </a>
         </div>
-        <a href="{% url 'upcoming_events' %}">경기일정</a>
-        <a href="{% url 'community' %}">커뮤니티</a>
-        <a href="{% url 'search_results' %}">선수위키</a>
-        <a href="{% url 'videos' %}">경기영상</a>
-        <a href="{% url 'chatroom' %}">채팅방</a>
+        <a href="{% url 'upcoming_events' %}">Events</a>
+        <a href="{% url 'community' %}">Community</a>
+        <a href="{% url 'search_results' %}">Fighter Wiki</a>
+        <a href="{% url 'videos' %}">Highlights</a>
+        <a href="{% url 'chatroom' %}">Chat</a>
 
         <div class="auth-links">
             {% if user.is_authenticated %}
