@@ -202,15 +202,15 @@
                 <a href="{% url 'fighter_detail' fighter.id %}">
                     <div class="fighter">
                         {% if fighter.photo %}
-                        <img src="{{ fighter.photo.url }}" alt="{{ fighter.name }}">
+                        <img src="{{ fighter.photo}}" alt="{{ fighter.name }}">
                         {% endif %}
                         <div class="fighter-details">
                             <h3>{{ fighter.name }}</h3>
                             <p><strong>Weight Class:</strong> {{ fighter.weight_class }}</p>
                             <p><strong>Record:</strong> {{ fighter.record }}</p>
-                            {% if fighter.description %}
-                            <p class="fighter-description">{{ fighter.description|slice:":50" }}{% if fighter.description|length > 50 %}...{% endif %}</p>
-                            {% endif %}
+                            <p><strong>Nickname:</strong> {{ fighter.nickname }}</p>
+
+
                         </div>
                     </div>
                 </a>
@@ -229,14 +229,14 @@
             <a href="{% url 'fighter_detail' fighter.id %}">
                 <div class="fighter-card">
                     {% if fighter.photo %}
-                    <img src="{{ fighter.photo.url }}" alt="{{ fighter.name }}">
+                    <img src="{{ fighter.photo }}" alt="{{ fighter.name }}">
                     {% endif %}
                     <h3>{{ fighter.name }}</h3>
                     <p><strong>Weight Class:</strong> {{ fighter.weight_class }}</p>
                     <p><strong>Record:</strong> {{ fighter.record }}</p>
-                    {% if fighter.description %}
-                    <p class="fighter-description">{{ fighter.description|slice:":50" }}{% if fighter.description|length > 50 %}...{% endif %}</p>
-                    {% endif %}
+                    <p><strong>Nickname:</strong> {{ fighter.nickname }}</p>
+
+
                 </div>
             </a>
             {% endfor %}

@@ -37,7 +37,7 @@ class Fighter(models.Model):
     nickname = models.CharField(max_length=100, blank=True, null=True)
     weight_class = models.CharField(max_length=50)
     record = models.CharField(max_length=50)
-    photo = models.ImageField(upload_to='fighter_photos/', blank=True, null=True)
+    photo = models.URLField(max_length=200, blank=True, null=True)
     description = models.TextField(blank=True, null=True)
     status = models.CharField(max_length=20, null=True, blank=True)
     hometown = models.CharField(max_length=30, null=True, blank=True)

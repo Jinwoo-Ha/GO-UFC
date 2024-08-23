@@ -1,0 +1,999 @@
+[
+    {
+        "model": "myapp.fighter",
+        "pk": 1,
+        "fields": {
+            "name": "Alexandre Pantoja",
+            "nickname": "The Cannibal",
+            "weight_class": "Flyweight",
+            "record": "26-5-0",
+            "photo": "fighter_photos/alexandre_pantoja.jpg",
+            "description": "Aggressive and technical flyweight fighter with a penchant for finishes.",
+            "status": "Active",
+            "hometown": "Rio de Janeiro, Brazil",
+            "age": 33,
+            "height": "5'5\"",
+            "biography": "<strong style=\\\"font-size: 20px;\\\">Overview</strong><br>Alexandre Pantoja, also known as 'The Cannibal', is one of the most respected fighters in the UFC Flyweight division. Known for his relentless pace, exceptional grappling, and striking skills, Pantoja has established himself as a top contender and eventual champion in one of the UFC's most competitive divisions.<br><br><strong style=\\\"font-size: 20px;\\\">Life</strong><br>Born on April 16, 1990, in Rio de Janeiro, Brazil, Pantoja was introduced to the world of martial arts at a young age. Growing up in a city renowned for its deep-rooted combat sports culture, Pantoja naturally gravitated towards Brazilian Jiu-Jitsu (BJJ), where he quickly excelled. By his teenage years, Pantoja was already competing in BJJ tournaments, honing the skills that would later define his MMA career.<br><br><strong style=\\\"font-size: 20px;\\\">Career</strong><br>Pantoja made his MMA debut in 2007, and after years of competing on the regional circuit, he earned a spot on 'The Ultimate Fighter: Tournament of Champions' in 2016. Although he didn’t win the show, his impressive performances earned him a UFC contract. Over the years, Pantoja has faced some of the top fighters in the flyweight division, including Brandon Moreno, Askar Askarov, and Deiveson Figueiredo. His victory over Moreno in 2018 solidified his status as a top contender. In 2023, Pantoja’s persistence and dedication paid off when he captured the UFC Flyweight Championship, cementing his legacy in the sport.<br><br><strong style=\\\"font-size: 20px;\\\">Interesting Anecdotes</strong><br>Pantoja’s journey to the top was anything but easy. Despite facing numerous setbacks and tough competition, he remained undeterred in his pursuit of excellence. His rivalry with Brandon Moreno is one of the most intriguing in the division, with their fights showcasing some of the highest levels of skill and determination. Pantoja is also known for his humble nature and strong connection to his Brazilian roots, often crediting his family and coaches for his success.",
+            "career_highlights": "UFC Flyweight Champion, 2023."
+        }
+    },
+    {
+        "model": "myapp.fighter",
+        "pk": 2,
+        "fields": {
+            "name": "Sean O'Malley",
+            "nickname": "Sugar",
+            "weight_class": "Bantamweight",
+            "record": "17-1-0",
+            "photo": "fighter_photos/sean_omalley.jpg",
+            "description": "One of the most charismatic and skilled strikers in the UFC, known for his flashy style and devastating knockouts.",
+            "status": "Active",
+            "hometown": "Helena, Montana, USA",
+            "age": 29,
+            "height": "5'11\"",
+            "biography": "<strong style=\\\"font-size: 20px;\\\">Overview</strong><br>Sean 'Sugar' O'Malley is a dynamic and charismatic fighter who has taken the UFC by storm with his unorthodox striking and vibrant personality. As the UFC Bantamweight Champion, O'Malley is known for his flashy techniques and knockout power, making him one of the most exciting fighters to watch in the octagon.<br><br><strong style=\\\"font-size: 20px;\\\">Life</strong><br>Born on October 24, 1994, in Helena, Montana, Sean O'Malley began training in mixed martial arts at a young age, drawn to the sport by his love for competition and creativity. Growing up in a small town, O'Malley found his escape in martial arts, where he could express his individuality and hone his skills. His early days in MMA were marked by a fierce determination to succeed, often training in makeshift gyms and competing in regional circuits across the Midwest.<br><br><strong style=\\\"font-size: 20px;\\\">Career</strong><br>O'Malley's rise to fame began when he appeared on Dana White's Contender Series in 2017, where he secured a spectacular knockout victory that went viral. This performance earned him a UFC contract, and he quickly became a fan favorite due to his striking prowess and colorful personality. O'Malley continued to build his brand with impressive victories, including knockouts over Eddie Wineland and Thomas Almeida. In 2023, O'Malley reached the pinnacle of his career by capturing the UFC Bantamweight Championship after defeating Aljamain Sterling in a highly anticipated bout. His unique style, combining precision striking with creative footwork, has made him a difficult opponent for anyone in the division.<br><br><strong style=\\\"font-size: 20px;\\\">Interesting Anecdotes</strong><br>O'Malley is not just a fighter but a cultural phenomenon. He has built a massive following on social media, where he shares his lifestyle, including his love for gaming, fashion, and cannabis. His podcast, 'The Timbo Sugar Show', is one of the most popular in the MMA community, offering fans a glimpse into his life outside the cage. O'Malley is also known for his unique hairstyles, often sporting bright colors and intricate designs that reflect his vibrant personality. Despite his rapid rise to fame, O'Malley remains grounded, attributing his success to his hard work, creativity, and the support of his team and fans.",
+            "career_highlights": "UFC Bantamweight Champion, 2023."
+        }
+    },
+    {
+        "model": "myapp.fighter",
+        "pk": 3,
+        "fields": {
+            "name": "Ilia Topuria",
+            "nickname": "El Matador",
+            "weight_class": "Featherweight",
+            "record": "14-0-0",
+            "photo": "fighter_photos/ilia_topuria.jpg",
+            "description": "An undefeated fighter with a powerful combination of striking and grappling skills, dominating the featherweight division.",
+            "status": "Active",
+            "hometown": "Halle, Germany",
+            "age": 27,
+            "height": "5'7\"",
+            "biography": "<strong style=\\\"font-size: 20px;\\\">Overview</strong><br>Ilia 'El Matador' Topuria is a rising star in the UFC Featherweight division, known for his perfect record and well-rounded skills. As the current champion, Topuria has quickly made a name for himself as one of the most dangerous fighters in the division, with a combination of powerful striking and high-level grappling.<br><br><strong style=\\\"font-size: 20px;\\\">Life</strong><br>Ilia Topuria was born on January 21, 1997, in Halle, Germany, to Georgian parents. He moved to Spain at a young age, where he began his martial arts training. Topuria initially focused on Greco-Roman wrestling, which provided a solid foundation for his grappling skills. His dedication to martial arts was evident from an early age, as he consistently excelled in competitions and quickly progressed through the ranks. Topuria's move to MMA was a natural progression, and he soon became known for his aggressive style and ability to finish fights.<br><br><strong style=\\\"font-size: 20px;\\\">Career</strong><br>Topuria made his professional MMA debut in 2015, and after amassing an undefeated record on the European circuit, he was signed by the UFC in 2020. His UFC debut was a statement, as he defeated Youssef Zalal by unanimous decision, showcasing his striking and grappling abilities. Topuria's rise in the featherweight division has been swift and decisive, with knockout victories over Damon Jackson, Ryan Hall, and Jai Herbert. His relentless pursuit of the top spot culminated in 2023 when he captured the UFC Featherweight Championship after a dominant performance against Alexander Volkanovski. Topuria's fighting style is characterized by his ability to seamlessly blend striking with grappling, making him a formidable opponent for anyone in the division.<br><br><strong style=\\\"font-size: 20px;\\\">Interesting Anecdotes</strong><br>Topuria's journey to the UFC is a testament to his determination and work ethic. Despite facing numerous challenges, including injuries and tough opponents, he has remained undefeated and continues to improve with each fight. Topuria is proud of his Georgian heritage and often carries the Georgian flag during his walkouts, symbolizing his connection to his roots. He is also known for his calm demeanor outside the cage, contrasting with his ferocity inside it.",
+            "career_highlights": "UFC Featherweight Champion, 2023."
+        }
+    },
+    {
+        "model": "myapp.fighter",
+        "pk": 1,
+        "fields": {
+            "name": "Brandon Royval",
+            "nickname": "Raw Dawg",
+            "weight_class": "Flyweight",
+            "record": "14-6-0",
+            "photo": "fighter_photos/brandon_royval.jpg",
+            "description": "Dynamic flyweight known for his aggressive style.",
+            "status": "Active",
+            "hometown": "Denver, Colorado, USA",
+            "age": 30,
+            "height": "5'7\"",
+            "biography": "<strong style=\\\"font-size: 20px;\\\">Overview</strong><br>Brandon Royval is a top contender in the UFC's Flyweight division, known for his aggressive and fast-paced fighting style. His ability to push the pace and finish fights has made him a fan favorite.<br><br><strong style=\\\"font-size: 20px;\\\">Life</strong><br>Royval was born and raised in Denver, Colorado, where he began training in martial arts at a young age. His early years were spent honing his skills in wrestling and Brazilian Jiu-Jitsu, which would later become the foundation of his MMA career.<br><br><strong style=\\\"font-size: 20px;\\\">Career</strong><br>Royval made his UFC debut in 2020 and quickly made an impact by defeating top-ranked fighters. His fighting style is characterized by relentless pressure and an ability to find submissions from any position. Despite facing setbacks, Royval has remained a top contender in the flyweight division.<br><br><strong style=\\\"font-size: 20px;\\\">Interesting Anecdotes</strong><br>Royval's never-say-die attitude has earned him numerous post-fight bonuses, making him one of the most exciting fighters to watch in the division.",
+            "career_highlights": "Multiple Fight of the Night awards."
+        }
+    },
+    {
+        "model": "myapp.fighter",
+        "pk": 2,
+        "fields": {
+            "name": "Brandon Moreno",
+            "nickname": "The Assassin Baby",
+            "weight_class": "Flyweight",
+            "record": "21-6-2",
+            "photo": "fighter_photos/brandon_moreno.jpg",
+            "description": "Former flyweight champion with exceptional grappling skills.",
+            "status": "Active",
+            "hometown": "Tijuana, Mexico",
+            "age": 29,
+            "height": "5'7\"",
+            "biography": "<strong style=\\\"font-size: 20px;\\\">Overview</strong><br>Brandon 'The Assassin Baby' Moreno is a Mexican mixed martial artist who competes in the UFC Flyweight division. Known for his heart and grappling skills, Moreno became the first Mexican-born UFC champion.<br><br><strong style=\\\"font-size: 20px;\\\">Life</strong><br>Born on December 7, 1993, in Tijuana, Mexico, Moreno started training in MMA at the age of 12. Despite the challenges of training in a region with limited resources for martial arts, Moreno's dedication and talent led him to become one of the best fighters in the world.<br><br><strong style=\\\"font-size: 20px;\\\">Career</strong><br>Moreno made his UFC debut in 2016 and quickly gained a reputation as a tough and durable fighter. After a series of impressive performances, he captured the UFC Flyweight Championship in 2021 by defeating Deiveson Figueiredo. Moreno is known for his well-rounded skill set, particularly his grappling and submission abilities.<br><br><strong style=\\\"font-size: 20px;\\\">Interesting Anecdotes</strong><br>Moreno's rise to the top is a story of perseverance and resilience. Despite being cut from the UFC after a string of losses, he worked his way back and ultimately became the champion. He is also a huge fan of Funko Pop! figures and often shares his collection with fans.",
+            "career_highlights": "UFC Flyweight Champion, 2021."
+        }
+    },
+    {
+        "model": "myapp.fighter",
+        "pk": 3,
+        "fields": {
+            "name": "Amir Albazi",
+            "nickname": "The Prince",
+            "weight_class": "Flyweight",
+            "record": "15-1-0",
+            "photo": "fighter_photos/amir_albazi.jpg",
+            "description": "Up-and-coming flyweight with a powerful grappling game.",
+            "status": "Active",
+            "hometown": "Baghdad, Iraq",
+            "age": 29,
+            "height": "5'5\"",
+            "biography": "<strong style=\\\"font-size: 20px;\\\">Overview</strong><br>Amir 'The Prince' Albazi is a rising star in the UFC Flyweight division, known for his grappling skills and relentless pursuit of victory.<br><br><strong style=\\\"font-size: 20px;\\\">Life</strong><br>Albazi was born in Baghdad, Iraq, and later moved to Sweden as a refugee. His early life was marked by challenges, but he found solace in martial arts, which gave him a sense of purpose and direction. Albazi started training in Brazilian Jiu-Jitsu at a young age and quickly became proficient in the sport.<br><br><strong style=\\\"font-size: 20px;\\\">Career</strong><br>Albazi made his UFC debut in 2020 and has quickly made a name for himself in the flyweight division. With a strong background in grappling, he has showcased his submission skills against top-level competition. Albazi is considered one of the top prospects in the division, and his future in the UFC looks bright.<br><br><strong style=\\\"font-size: 20px;\\\">Interesting Anecdotes</strong><br>Despite his young age, Albazi has already made a significant impact in the sport. He is known for his calm demeanor inside the octagon and his ability to stay composed under pressure. Albazi is also fluent in multiple languages, which helps him connect with fans around the world.",
+            "career_highlights": "UFC Flyweight Contender, multiple submission victories."
+        }
+    },
+    {
+        "model": "myapp.fighter",
+        "pk": 4,
+        "fields": {
+            "name": "Merab Dvalishvili",
+            "nickname": "The Machine",
+            "weight_class": "Bantamweight",
+            "record": "15-4-0",
+            "photo": "fighter_photos/merab_dvalishvili.jpg",
+            "description": "Relentless bantamweight with a high-output fighting style.",
+            "status": "Active",
+            "hometown": "Tbilisi, Georgia",
+            "age": 32,
+            "height": "5'6\"",
+            "biography": "<strong style=\\\"font-size: 20px;\\\">Overview</strong><br>Merab Dvalishvili, known as 'The Machine', is a bantamweight fighter famous for his relentless pace and cardio. He is widely regarded as one of the toughest fighters in the division.<br><br><strong style=\\\"font-size: 20px;\\\">Life</strong><br>Born in Tbilisi, Georgia, Merab started his martial arts journey with Sambo and Judo, eventually transitioning to MMA. His early life in Georgia was marked by a love for combat sports, which drove him to pursue a professional career.<br><br><strong style=\\\"font-size: 20px;\\\">Career</strong><br>Merab made his UFC debut in 2017 and has since established himself as one of the top bantamweights in the world. His fighting style is characterized by high output and relentless pressure, often outworking his opponents over the course of a fight.<br><br><strong style=\\\"font-size: 20px;\\\">Interesting Anecdotes</strong><br>Merab is known for his unbreakable spirit and his close friendship with fellow UFC fighter Aljamain Sterling. Together, they form one of the most dynamic duos in MMA.",
+            "career_highlights": "Multiple takedown records in the UFC."
+        }
+    },
+    {
+        "model": "myapp.fighter",
+        "pk": 5,
+        "fields": {
+            "name": "Umar Nurmagomedov",
+            "nickname": "",
+            "weight_class": "Bantamweight",
+            "record": "15-0-0",
+            "photo": "fighter_photos/umar_nurmagomedov.jpg",
+            "description": "Undefeated bantamweight prospect with strong wrestling and submission skills.",
+            "status": "Active",
+            "hometown": "Makhachkala, Russia",
+            "age": 27,
+            "height": "5'8\"",
+            "biography": "<strong style=\\\"font-size: 20px;\\\">Overview</strong><br>Umar Nurmagomedov is an undefeated bantamweight fighter from Russia, known for his grappling prowess and technical striking. He is the cousin of former UFC champion Khabib Nurmagomedov.<br><br><strong style=\\\"font-size: 20px;\\\">Life</strong><br>Umar was born in Makhachkala, Russia, and comes from a family with a deep-rooted history in combat sports. Trained under the guidance of his uncle, Abdulmanap Nurmagomedov, Umar developed a strong foundation in wrestling and Sambo, which later translated into his success in MMA.<br><br><strong style=\\\"font-size: 20px;\\\">Career</strong><br>Umar made his UFC debut in 2021 and quickly gained attention for his well-rounded skills and calm demeanor inside the octagon. With an undefeated record, Umar is considered one of the top prospects in the bantamweight division. His ability to control his opponents on the ground and his improving striking make him a dangerous opponent for anyone in the division.<br><br><strong style=\\\"font-size: 20px;\\\">Interesting Anecdotes</strong><br>Umar is known for his disciplined lifestyle and strong work ethic, values that were instilled in him by his family. He is also a devout Muslim and often speaks about the importance of his faith in his life and career.",
+            "career_highlights": "Undefeated UFC bantamweight contender."
+        }
+    },
+    {
+        "model": "myapp.fighter",
+        "pk": 6,
+        "fields": {
+            "name": "Petr Yan",
+            "nickname": "No Mercy",
+            "weight_class": "Bantamweight",
+            "record": "16-4-0",
+            "photo": "fighter_photos/petr_yan.jpg",
+            "description": "Former bantamweight champion known for his aggressive striking and fight IQ.",
+            "status": "Active",
+            "hometown": "Dudinka, Russia",
+            "age": 30,
+            "height": "5'7\"",
+            "biography": "<strong style=\\\"font-size: 20px;\\\">Overview</strong><br>Petr 'No Mercy' Yan is a former UFC Bantamweight Champion known for his precise striking, relentless pace, and tactical fight IQ.<br><br><strong style=\\\"font-size: 20px;\\\">Life</strong><br>Yan was born in Dudinka, Russia, and grew up in a small town where he developed a passion for martial arts. He started training in Taekwondo and boxing as a teenager and later transitioned to MMA. Yan's early life was marked by a determination to succeed, which eventually led him to the UFC.<br><br><strong style=\\\"font-size: 20px;\\\">Career</strong><br>Yan made his UFC debut in 2018 and quickly rose through the ranks with a series of impressive victories. He captured the UFC Bantamweight Championship in 2020 by defeating Jose Aldo. Known for his aggressive striking and ability to adapt during fights, Yan is one of the most well-rounded fighters in the division.<br><br><strong style=\\\"font-size: 20px;\\\">Interesting Anecdotes</strong><br>Yan's nickname 'No Mercy' reflects his fighting style, which is characterized by relentless pressure and a willingness to engage in exchanges. Outside of fighting, Yan is a dedicated family man and often shares moments with his family on social media.",
+            "career_highlights": "UFC Bantamweight Champion, 2020."
+        }
+    },
+    {
+        "model": "myapp.fighter",
+        "pk": 7,
+        "fields": {
+            "name": "Alexander Volkanovski",
+            "nickname": "The Great",
+            "weight_class": "Featherweight",
+            "record": "25-2-0",
+            "photo": "fighter_photos/alexander_volkanovski.jpg",
+            "description": "Featherweight champion known for his tactical approach and resilience.",
+            "status": "Champion",
+            "hometown": "Shellharbour, New South Wales, Australia",
+            "age": 35,
+            "height": "5'6\"",
+            "biography": "<strong style=\\\"font-size: 20px;\\\">Overview</strong><br>Alexander Volkanovski is the reigning UFC Featherweight Champion, known for his technical prowess and tactical fight IQ. He has solidified his place as one of the best pound-for-pound fighters in the world.<br><br><strong style=\\\"font-size: 20px;\\\">Life</strong><br>Volkanovski was born in Shellharbour, New South Wales, Australia, and started his sports career in rugby before transitioning to mixed martial arts. His background in rugby gave him a solid base of strength and conditioning, which he brought with him into MMA. Volkanovski's strong work ethic and determination were evident from the beginning, and he quickly rose through the ranks.<br><br><strong style=\\\"font-size: 20px;\\\">Career</strong><br>Volkanovski made his UFC debut in 2016 and quickly established himself as a force to be reckoned with. His victories over top fighters like Chad Mendes, Jose Aldo, and Max Holloway earned him the featherweight title, which he has successfully defended multiple times. His fighting style is characterized by his ability to adjust tactics mid-fight and outmaneuver his opponents.<br><br><strong style=\\\"font-size: 20px;\\\">Interesting Anecdotes</strong><br>Volkanovski is known for his calm demeanor outside the cage, contrasting with his intense competitiveness inside it. He has a deep respect for his opponents and often credits his team and family for his success. Volkanovski also runs a popular YouTube channel where he shares insights into his training and fight preparation.",
+            "career_highlights": "UFC Featherweight Champion, multiple title defenses."
+        }
+    },
+    {
+        "model": "myapp.fighter",
+        "pk": 8,
+        "fields": {
+            "name": "Max Holloway",
+            "nickname": "Blessed",
+            "weight_class": "Featherweight",
+            "record": "23-7-0",
+            "photo": "fighter_photos/max_holloway.jpg",
+            "description": "Former featherweight champion known for his incredible volume striking.",
+            "status": "Active",
+            "hometown": "Waianae, Hawaii, USA",
+            "age": 31,
+            "height": "5'11\"",
+            "biography": "<strong style=\\\"font-size: 20px;\\\">Overview</strong><br>Max Holloway, also known as 'Blessed', is one of the most decorated fighters in the UFC Featherweight division. Known for his unmatched volume striking and cardio, Holloway is a former featherweight champion who has faced the best of the best.<br><br><strong style=\\\"font-size: 20px;\\\">Life</strong><br>Holloway was born and raised in Waianae, Hawaii, a place that he credits for giving him the toughness and grit that define his fighting style. He began training in kickboxing and Brazilian Jiu-Jitsu at a young age, which naturally led to a career in MMA.<br><br><strong style=\\\"font-size: 20px;\\\">Career</strong><br>Holloway made his UFC debut in 2012 and quickly rose through the ranks with his high-volume striking and relentless pace. He captured the featherweight title in 2017 by defeating Jose Aldo and went on to defend it multiple times. Holloway is known for his memorable battles with top fighters like Dustin Poirier, Conor McGregor, and Alexander Volkanovski.<br><br><strong style=\\\"font-size: 20px;\\\">Interesting Anecdotes</strong><br>Holloway is famous for his catchphrase 'It is what it is' and his laid-back Hawaiian attitude. Despite his success, he remains humble and deeply connected to his roots in Hawaii. Outside the cage, Holloway is a devoted father and enjoys surfing and playing video games.",
+            "career_highlights": "UFC Featherweight Champion, multiple Fight of the Night bonuses."
+        }
+    },
+    {
+        "model": "myapp.fighter",
+        "pk": 9,
+        "fields": {
+            "name": "Brian Ortega",
+            "nickname": "T-City",
+            "weight_class": "Featherweight",
+            "record": "15-2-0",
+            "photo": "fighter_photos/brian_ortega.jpg",
+            "description": "Submission specialist with a dangerous ground game.",
+            "status": "Active",
+            "hometown": "Los Angeles, California, USA",
+            "age": 32,
+            "height": "5'8\"",
+            "biography": "<strong style=\\\"font-size: 20px;\\\">Overview</strong><br>Brian 'T-City' Ortega is a top contender in the UFC Featherweight division, known for his exceptional submission skills and resilience. He is one of the most dangerous fighters on the ground in the UFC.<br><br><strong style=\\\"font-size: 20px;\\\">Life</strong><br>Ortega was born in Los Angeles, California, and grew up in a tough neighborhood where he found solace in martial arts. He began training in Brazilian Jiu-Jitsu at a young age under the tutelage of Rener Gracie, and his love for the sport quickly grew. Ortega's early life was marked by challenges, but his commitment to martial arts kept him focused on his goals.<br><br><strong style=\\\"font-size: 20px;\\\">Career</strong><br>Ortega made his UFC debut in 2014 and quickly gained a reputation for his submission abilities, earning the nickname 'T-City' for his triangle choke finishes. He has faced some of the toughest fighters in the division, including Max Holloway and Alexander Volkanovski, and continues to be a top contender despite setbacks.<br><br><strong style=\\\"font-size: 20px;\\\">Interesting Anecdotes</strong><br>Ortega is known for his calm demeanor and never-give-up attitude, both in and out of the cage. He is deeply involved in his community, often giving back through charity work and mentoring young fighters. Ortega's close relationship with the Gracie family has also played a significant role in his career development.",
+            "career_highlights": "Multiple Submission of the Night awards."
+        }
+    },
+    {
+        "model": "myapp.fighter",
+        "pk": 10,
+        "fields": {
+            "name": "Islam Makhachev",
+            "nickname": "",
+            "weight_class": "Lightweight",
+            "record": "24-1-0",
+            "photo": "fighter_photos/islam_makhachev.jpg",
+            "description": "Lightweight champion known for his dominant grappling and wrestling.",
+            "status": "Active",
+            "hometown": "Makhachkala, Russia",
+            "age": 32,
+            "height": "5'10\"",
+            "biography": "<strong style=\\\"font-size: 20px;\\\">Overview</strong><br>Islam Makhachev is the reigning UFC Lightweight Champion, widely regarded for his exceptional grappling and wrestling abilities. A protégé of Khabib Nurmagomedov, Makhachev has continued the Dagestani tradition of dominant wrestling inside the octagon.<br><br><strong style=\\\"font-size: 20px;\\\">Life</strong><br>Born on September 27, 1991, in Makhachkala, Russia, Islam Makhachev was immersed in the world of combat sports from a young age. Growing up in the same region as Khabib Nurmagomedov, Makhachev began training in wrestling and Sambo, following the path of many successful Dagestani fighters.<br><br><strong style=\\\"font-size: 20px;\\\">Career</strong><br>Makhachev made his UFC debut in 2015 and quickly made a name for himself as one of the top grapplers in the lightweight division. With a mix of powerful takedowns and suffocating top control, he has consistently outworked and outclassed his opponents. In 2022, Makhachev captured the UFC Lightweight Championship, solidifying his status as one of the best pound-for-pound fighters in the world.<br><br><strong style=\\\"font-size: 20px;\\\">Interesting Anecdotes</strong><br>Makhachev is known for his calm demeanor and methodical approach to fighting. Outside the octagon, he is a close friend and training partner of Khabib Nurmagomedov, with whom he shares a deep bond. Makhachev's disciplined lifestyle and dedication to his craft have made him a role model for aspiring fighters in Dagestan and beyond.",
+            "career_highlights": "UFC Lightweight Champion, 2022."
+        }
+    },
+    {
+        "model": "myapp.fighter",
+        "pk": 11,
+        "fields": {
+            "name": "Belal Muhammad",
+            "nickname": "Remember The Name",
+            "weight_class": "Welterweight",
+            "record": "22-3-0",
+            "photo": "fighter_photos/belal_muhammad.jpg",
+            "description": "Welterweight champion known for his resilience and strategic fighting style.",
+            "status": "Active",
+            "hometown": "Chicago, Illinois, USA",
+            "age": 35,
+            "height": "5'11\"",
+            "biography": "<strong style=\\\"font-size: 20px;\\\">Overview</strong><br>Belal 'Remember The Name' Muhammad is the UFC Welterweight Champion, celebrated for his durability, fight IQ, and ability to execute game plans effectively. He has become one of the most respected figures in the welterweight division.<br><br><strong style=\\\"font-size: 20px;\\\">Life</strong><br>Born on July 9, 1988, in Chicago, Illinois, Belal Muhammad grew up in a Palestinian-American family and was drawn to combat sports from a young age. His early training included wrestling and Brazilian Jiu-Jitsu, disciplines that would become the foundation of his MMA career.<br><br><strong style=\\\"font-size: 20px;\\\">Career</strong><br>Muhammad made his UFC debut in 2016 and quickly established himself as a fighter with an incredible work ethic and strategic mindset. Known for his ability to adjust to his opponents' strengths and weaknesses, Muhammad has climbed the ranks to become the welterweight champion. His victories over top contenders like Leon Edwards and Stephen Thompson have solidified his place at the top of the division.<br><br><strong style=\\\"font-size: 20px;\\\">Interesting Anecdotes</strong><br>Belal is known not just for his skills inside the octagon, but also for his work as an analyst and commentator. He is highly regarded for his insight into the sport and his ability to break down fights. Belal is also deeply connected to his heritage and often speaks about the importance of representing his Palestinian roots on the global stage.",
+            "career_highlights": "UFC Welterweight Champion, 2023."
+        }
+    },
+    {
+        "model": "myapp.fighter",
+        "pk": 12,
+        "fields": {
+            "name": "Dricus Du Plessis",
+            "nickname": "Stillknocks",
+            "weight_class": "Middleweight",
+            "record": "19-2-0",
+            "photo": "fighter_photos/dricus_du_plessis.jpg",
+            "description": "Middleweight champion with powerful striking and finishing abilities.",
+            "status": "Active",
+            "hometown": "Pretoria, South Africa",
+            "age": 29,
+            "height": "6'1\"",
+            "biography": "<strong style=\\\"font-size: 20px;\\\">Overview</strong><br>Dricus 'Stillknocks' Du Plessis is the UFC Middleweight Champion, known for his knockout power and aggressive fighting style. He has quickly risen through the ranks to become one of the top fighters in the division.<br><br><strong style=\\\"font-size: 20px;\\\">Life</strong><br>Du Plessis was born on January 14, 1994, in Pretoria, South Africa. Growing up in a sports-oriented family, he was exposed to various sports from a young age, but it was in martial arts that he found his true calling. Du Plessis started training in kickboxing and soon transitioned to MMA, where he began making a name for himself in the South African regional circuits.<br><br><strong style=\\\"font-size: 20px;\\\">Career</strong><br>Du Plessis made his UFC debut in 2020 and quickly impressed fans and analysts with his powerful striking and finishing abilities. With a series of knockout victories, he earned a shot at the middleweight title, which he captured in 2023. Du Plessis is known for his relentless pressure and ability to finish fights, making him a dangerous opponent for anyone in the division.<br><br><strong style=\\\"font-size: 20px;\\\">Interesting Anecdotes</strong><br>Du Plessis is known for his nickname 'Stillknocks', which reflects his knockout power. Outside of fighting, he is passionate about wildlife conservation and often uses his platform to raise awareness about protecting endangered species in South Africa.",
+            "career_highlights": "UFC Middleweight Champion, 2023."
+        }
+    },
+    {
+        "model": "myapp.fighter",
+        "pk": 13,
+        "fields": {
+            "name": "Alex Pereira",
+            "nickname": "Poatan",
+            "weight_class": "Light Heavyweight",
+            "record": "7-2-0",
+            "photo": "fighter_photos/alex_pereira.jpg",
+            "description": "Former middleweight champion with a dangerous striking game, now competing at light heavyweight.",
+            "status": "Active",
+            "hometown": "São Bernardo do Campo, Brazil",
+            "age": 36,
+            "height": "6'4\"",
+            "biography": "<strong style=\\\"font-size: 20px;\\\">Overview</strong><br>Alex 'Poatan' Pereira is the former UFC Middleweight Champion and current Light Heavyweight contender, known for his devastating knockout power and striking precision.<br><br><strong style=\\\"font-size: 20px;\\\">Life</strong><br>Pereira was born on July 7, 1987, in São Bernardo do Campo, Brazil. He began training in kickboxing as a way to escape a troubled youth and quickly discovered his talent for striking. Pereira's journey through the world of kickboxing saw him rise to the top, eventually transitioning to MMA, where his striking skills set him apart.<br><br><strong style=\\\"font-size: 20px;\\\">Career</strong><br>Pereira made his UFC debut in 2021 and quickly ascended the ranks, capturing the Middleweight title in 2022. Known for his rivalry with Israel Adesanya, Pereira's knockout victory over Adesanya is one of the most memorable moments in recent UFC history. After defending his title, Pereira moved up to the Light Heavyweight division, where he continues to be a top contender.<br><br><strong style=\\\"font-size: 20px;\\\">Interesting Anecdotes</strong><br>Alex Pereira's nickname 'Poatan', which means 'Stone Hands' in his native language, reflects his incredible punching power. Outside of the octagon, Pereira is a dedicated family man and enjoys spending time with his children. He is also known for his quiet and humble demeanor, contrasting with his ferocity inside the cage.",
+            "career_highlights": "UFC Middleweight Champion, 2022; Light Heavyweight Contender."
+        }
+    },
+    {
+        "model": "myapp.fighter",
+        "pk": 14,
+        "fields": {
+            "name": "Arman Tsarukyan",
+            "nickname": "Ahalkalakets",
+            "weight_class": "Lightweight",
+            "record": "19-3-0",
+            "photo": "fighter_photos/arman_tsarukyan.jpg",
+            "description": "Rising lightweight contender known for his grappling and relentless pressure.",
+            "status": "Active",
+            "hometown": "Yerevan, Armenia",
+            "age": 26,
+            "height": "5'7\"",
+            "biography": "<strong style=\\\"font-size: 20px;\\\">Overview</strong><br>Arman Tsarukyan is a top lightweight contender in the UFC, known for his exceptional grappling, cardio, and relentless fighting style. He is regarded as one of the future stars of the division.<br><br><strong style=\\\"font-size: 20px;\\\">Life</strong><br>Born on October 11, 1996, in Yerevan, Armenia, Tsarukyan grew up in a combat sports-oriented family, starting his training in wrestling at a young age. He later transitioned to MMA, where he honed his skills and developed a well-rounded fighting style.<br><br><strong style=\\\"font-size: 20px;\\\">Career</strong><br>Tsarukyan made his UFC debut in 2019, facing Islam Makhachev in a closely contested fight that earned him recognition as a serious contender. Since then, he has climbed the ranks with impressive victories over top competition. His grappling and striking continue to improve, making him a threat to any lightweight in the division.<br><br><strong style=\\\"font-size: 20px;\\\">Interesting Anecdotes</strong><br>Despite his tough exterior in the octagon, Tsarukyan is known for his humble and disciplined approach to life outside the cage. He is a proud representative of Armenia and often speaks about the importance of his heritage.",
+            "career_highlights": "Top UFC Lightweight Contender."
+        }
+    },
+    {
+        "model": "myapp.fighter",
+        "pk": 15,
+        "fields": {
+            "name": "Charles Oliveira",
+            "nickname": "Do Bronx",
+            "weight_class": "Lightweight",
+            "record": "34-9-0",
+            "photo": "fighter_photos/charles_oliveira.jpg",
+            "description": "Former lightweight champion known for his exceptional submission skills.",
+            "status": "Active",
+            "hometown": "Guarujá, Brazil",
+            "age": 34,
+            "height": "5'10\"",
+            "biography": "<strong style=\\\"font-size: 20px;\\\">Overview</strong><br>Charles 'Do Bronx' Oliveira is a former UFC Lightweight Champion, recognized for holding the record for the most submission victories in UFC history. He is known for his resilience and ability to finish fights.<br><br><strong style=\\\"font-size: 20px;\\\">Life</strong><br>Born on October 17, 1989, in Guarujá, Brazil, Oliveira grew up in a tough neighborhood and started training in Brazilian Jiu-Jitsu at a young age. His passion for the sport quickly translated into success as he competed in various BJJ tournaments, eventually transitioning to MMA.<br><br><strong style=\\\"font-size: 20px;\\\">Career</strong><br>Oliveira made his UFC debut in 2010 and has since become one of the most decorated fighters in the promotion's history. He captured the UFC Lightweight Championship in 2021 and defended it successfully before eventually losing it. Oliveira is known for his aggressive style, excellent ground game, and ability to recover from adversity.<br><br><strong style=\\\"font-size: 20px;\\\">Interesting Anecdotes</strong><br>Oliveira's journey to the top of the UFC is a testament to his perseverance and dedication. Despite early setbacks in his career, he continued to evolve and improve, eventually becoming a world champion. He is also deeply involved in charity work in Brazil, helping underprivileged communities in his hometown.",
+            "career_highlights": "UFC Lightweight Champion, Most Submission Victories in UFC History."
+        }
+    },
+    {
+        "model": "myapp.fighter",
+        "pk": 16,
+        "fields": {
+            "name": "Justin Gaethje",
+            "nickname": "The Highlight",
+            "weight_class": "Lightweight",
+            "record": "24-4-0",
+            "photo": "fighter_photos/justin_gaethje.jpg",
+            "description": "Lightweight contender known for his striking power and exciting fight style.",
+            "status": "Active",
+            "hometown": "Safford, Arizona, USA",
+            "age": 34,
+            "height": "5'11\"",
+            "biography": "<strong style=\\\"font-size: 20px;\\\">Overview</strong><br>Justin 'The Highlight' Gaethje is one of the most exciting fighters in the UFC Lightweight division, known for his powerful striking and relentless pressure. He has earned a reputation as a must-watch fighter due to his aggressive style.<br><br><strong style=\\\"font-size: 20px;\\\">Life</strong><br>Gaethje was born on November 14, 1988, in Safford, Arizona, and began wrestling at a young age. His competitive spirit led him to excel in high school and collegiate wrestling before transitioning to MMA, where he quickly made a name for himself with his knockout power.<br><br><strong style=\\\"font-size: 20px;\\\">Career</strong><br>Gaethje made his UFC debut in 2017 and quickly became known for his all-action fighting style. He has faced and defeated some of the top names in the lightweight division, earning multiple Fight of the Night bonuses. Gaethje is a former interim lightweight champion and continues to be a top contender in the division.<br><br><strong style=\\\"font-size: 20px;\\\">Interesting Anecdotes</strong><br>Gaethje is known for his intense training regimen and dedication to the sport. Despite his aggressive fighting style, he is known to be a humble and grounded individual outside the octagon. He often speaks about the importance of mental toughness and resilience in his career.",
+            "career_highlights": "Former Interim UFC Lightweight Champion, Multiple Fight of the Night Bonuses."
+        }
+    },
+    {
+        "model": "myapp.fighter",
+        "pk": 17,
+        "fields": {
+            "name": "Leon Edwards",
+            "nickname": "Rocky",
+            "weight_class": "Welterweight",
+            "record": "21-3-0",
+            "photo": "fighter_photos/leon_edwards.jpg",
+            "description": "Welterweight champion known for his striking and well-rounded skill set.",
+            "status": "Active",
+            "hometown": "Birmingham, England",
+            "age": 32,
+            "height": "6'0\"",
+            "biography": "<strong style=\\\"font-size: 20px;\\\">Overview</strong><br>Leon 'Rocky' Edwards is the reigning UFC Welterweight Champion, known for his sharp striking and tactical approach to fighting. He has established himself as one of the top fighters in the welterweight division.<br><br><strong style=\\\"font-size: 20px;\\\">Life</strong><br>Edwards was born on August 25, 1991, in Kingston, Jamaica, and moved to Birmingham, England, at a young age. He started training in MMA as a teenager and quickly developed a passion for the sport, eventually turning professional.<br><br><strong style=\\\"font-size: 20px;\\\">Career</strong><br>Edwards made his UFC debut in 2014 and steadily climbed the ranks with a series of impressive victories. He captured the welterweight title in 2022 with a stunning knockout of Kamaru Usman. Edwards is known for his well-rounded skills, including excellent striking, grappling, and fight IQ.<br><br><strong style=\\\"font-size: 20px;\\\">Interesting Anecdotes</strong><br>Edwards' journey to the top of the UFC is a story of perseverance and hard work. Despite facing numerous challenges, including long layoffs and tough opponents, he remained focused on his goal of becoming a champion. Outside the octagon, Edwards is known for his charitable work and his efforts to inspire the next generation of fighters.",
+            "career_highlights": "UFC Welterweight Champion, 2022."
+        }
+    },
+    {
+        "model": "myapp.fighter",
+        "pk": 18,
+        "fields": {
+            "name": "Kamaru Usman",
+            "nickname": "The Nigerian Nightmare",
+            "weight_class": "Welterweight",
+            "record": "20-3-0",
+            "photo": "fighter_photos/kamaru_usman.jpg",
+            "description": "Former welterweight champion known for his dominant wrestling and striking.",
+            "status": "Active",
+            "hometown": "Auchi, Nigeria",
+            "age": 36,
+            "height": "6'0\"",
+            "biography": "<strong style=\\\"font-size: 20px;\\\">Overview</strong><br>Kamaru 'The Nigerian Nightmare' Usman is a former UFC Welterweight Champion, widely regarded as one of the greatest fighters in the division's history. Known for his wrestling, striking, and relentless pace, Usman has dominated the welterweight division for years.<br><br><strong style=\\\"font-size: 20px;\\\">Life</strong><br>Usman was born on May 11, 1987, in Auchi, Nigeria, and moved to the United States at a young age. He began wrestling in high school and went on to become an NCAA Division II national champion. His wrestling background laid the foundation for his successful MMA career.<br><br><strong style=\\\"font-size: 20px;\\\">Career</strong><br>Usman made his UFC debut in 2015 and quickly climbed the ranks with dominant performances. He captured the welterweight title in 2019 and successfully defended it multiple times against top contenders. Usman is known for his ability to control his opponents with his wrestling and his ever-improving striking.<br><br><strong style=\\\"font-size: 20px;\\\">Interesting Anecdotes</strong><br>Usman's rivalry with Colby Covington is one of the most intense in recent UFC history. Their first fight in 2019 was a back-and-forth war that ended with Usman securing a fifth-round knockout. Usman's ability to rise to the occasion in big fights has solidified his place as one of the greatest welterweights of all time.",
+            "career_highlights": "UFC Welterweight Champion, 2019-2022."
+        }
+    },
+    {
+        "model": "myapp.fighter",
+        "pk": 19,
+        "fields": {
+            "name": "Shavkat Rakhmonov",
+            "nickname": "Nomad",
+            "weight_class": "Welterweight",
+            "record": "17-0-0",
+            "photo": "fighter_photos/shavkat_rakhmonov.jpg",
+            "description": "Undefeated welterweight contender known for his well-rounded skills.",
+            "status": "Active",
+            "hometown": "Shymkent, Kazakhstan",
+            "age": 29,
+            "height": "6'1\"",
+            "biography": "<strong style=\\\"font-size: 20px;\\\">Overview</strong><br>Shavkat 'Nomad' Rakhmonov is an undefeated welterweight contender in the UFC, known for his well-rounded skill set and finishing abilities. He is considered one of the most dangerous prospects in the division.<br><br><strong style=\\\"font-size: 20px;\\\">Life</strong><br>Rakhmonov was born on October 23, 1994, in Shymkent, Kazakhstan, and grew up in a family with a strong martial arts background. He began training in Sambo and MMA at a young age and quickly rose through the ranks in regional promotions before joining the UFC.<br><br><strong style=\\\"font-size: 20px;\\\">Career</strong><br>Rakhmonov made his UFC debut in 2020 and has since established himself as one of the top contenders in the welterweight division. His ability to finish fights, whether by knockout or submission, has made him a fan favorite. Rakhmonov's undefeated record and impressive performances have earned him a reputation as a future title contender.<br><br><strong style=\\\"font-size: 20px;\\\">Interesting Anecdotes</strong><br>Rakhmonov is known for his stoic demeanor and focused approach to fighting. Despite his success, he remains humble and dedicated to his craft. Rakhmonov's nickname 'Nomad' reflects his Kazakh heritage and his journey through the world of combat sports.",
+            "career_highlights": "Undefeated UFC Welterweight Contender."
+        }
+    },
+    {
+        "model": "myapp.fighter",
+        "pk": 20,
+        "fields": {
+            "name": "Sean Strickland",
+            "nickname": "Tarzan",
+            "weight_class": "Middleweight",
+            "record": "27-5-0",
+            "photo": "fighter_photos/sean_strickland.jpg",
+            "description": "Middleweight champion known for his outspoken personality and striking.",
+            "status": "Active",
+            "hometown": "Anaheim, California, USA",
+            "age": 32,
+            "height": "6'1\"",
+            "biography": "<strong style=\\\"font-size: 20px;\\\">Overview</strong><br>Sean 'Tarzan' Strickland is the UFC Middleweight Champion, known for his striking skills and unapologetically outspoken personality. Strickland has become a fan favorite for his willingness to speak his mind and take on any challenge.<br><br><strong style=\\\"font-size: 20px;\\\">Life</strong><br>Strickland was born on February 27, 1991, in Anaheim, California, and began training in martial arts as a teenager. His troubled upbringing led him to find discipline and purpose in MMA, where he developed into a skilled striker.<br><br><strong style=\\\"font-size: 20px;\\\">Career</strong><br>Strickland made his UFC debut in 2014 and steadily climbed the ranks in the middleweight division. He captured the middleweight title in 2023, defeating Israel Adesanya in a stunning upset. Strickland's aggressive striking and unorthodox fighting style make him a tough matchup for anyone in the division.<br><br><strong style=\\\"font-size: 20px;\\\">Interesting Anecdotes</strong><br>Strickland is known for his candid and often controversial statements outside the octagon. Despite this, he is respected by his peers for his dedication to the sport and his ability to back up his words with performances inside the cage. Strickland's journey to the top of the middleweight division is a testament to his resilience and self-belief.",
+            "career_highlights": "UFC Middleweight Champion, 2023."
+        }
+    },
+    {
+        "model": "myapp.fighter",
+        "pk": 21,
+        "fields": {
+            "name": "Israel Adesanya",
+            "nickname": "The Last Stylebender",
+            "weight_class": "Middleweight",
+            "record": "24-3-0",
+            "photo": "fighter_photos/israel_adesanya.jpg",
+            "description": "Former middleweight champion known for his striking and dynamic fighting style.",
+            "status": "Active",
+            "hometown": "Lagos, Nigeria",
+            "age": 34,
+            "height": "6'4\"",
+            "biography": "<strong style=\\\"font-size: 20px;\\\">Overview</strong><br>Israel 'The Last Stylebender' Adesanya is a former UFC Middleweight Champion, known for his striking mastery and charismatic presence. He is widely regarded as one of the best strikers in MMA history.<br><br><strong style=\\\"font-size: 20px;\\\">Life</strong><br>Born on July 22, 1989, in Lagos, Nigeria, Adesanya moved to New Zealand with his family at a young age. He began training in kickboxing and later transitioned to MMA, where his striking skills quickly made him a standout fighter.<br><br><strong style=\\\"font-size: 20px;\\\">Career</strong><br>Adesanya made his UFC debut in 2018 and quickly rose to fame, capturing the UFC Middleweight Championship in 2019. He defended the title multiple times against some of the top fighters in the division. Adesanya is known for his ability to out-strike and outmaneuver his opponents, often making it look effortless.<br><br><strong style=\\\"font-size: 20px;\\\">Interesting Anecdotes</strong><br>Adesanya is known for his love of anime and often incorporates elements of his favorite shows into his fight entrances and style. He is also a strong advocate for mental health and frequently speaks out about the importance of mental well-being for athletes.",
+            "career_highlights": "UFC Middleweight Champion, 2019-2023."
+        }
+    },
+    {
+        "model": "myapp.fighter",
+        "pk": 22,
+        "fields": {
+            "name": "Robert Whittaker",
+            "nickname": "The Reaper",
+            "weight_class": "Middleweight",
+            "record": "24-6-0",
+            "photo": "fighter_photos/robert_whittaker.jpg",
+            "description": "Former middleweight champion known for his striking and endurance.",
+            "status": "Active",
+            "hometown": "Sydney, Australia",
+            "age": 32,
+            "height": "6'0\"",
+            "biography": "<strong style=\\\"font-size: 20px;\\\">Overview</strong><br>Robert 'The Reaper' Whittaker is a former UFC Middleweight Champion, known for his powerful striking and incredible endurance. He is one of the most respected fighters in the division.<br><br><strong style=\\\"font-size: 20px;\\\">Life</strong><br>Whittaker was born on December 20, 1990, in Sydney, Australia, and began training in martial arts at a young age. He initially started with karate before transitioning to MMA, where he quickly rose through the ranks in the Australian circuit.<br><br><strong style=\\\"font-size: 20px;\\\">Career</strong><br>Whittaker made his UFC debut in 2012 and became the middleweight champion in 2017. He successfully defended his title against some of the best fighters in the division before losing it to Israel Adesanya. Whittaker is known for his resilience and ability to bounce back from setbacks, consistently remaining a top contender in the middleweight division.<br><br><strong style=\\\"font-size: 20px;\\\">Interesting Anecdotes</strong><br>Whittaker is known for his down-to-earth personality and dedication to his family. Outside of fighting, he enjoys playing video games and spending time with his children. Despite his success, Whittaker remains humble and focused on improving as a fighter.",
+            "career_highlights": "UFC Middleweight Champion, 2017-2019."
+        }
+    },
+    {
+        "model": "myapp.fighter",
+        "pk": 23,
+        "fields": {
+            "name": "Jiří Procházka",
+            "nickname": "Denisa",
+            "weight_class": "Light Heavyweight",
+            "record": "29-3-1",
+            "photo": "fighter_photos/jiri_prochazka.jpg",
+            "description": "Former light heavyweight champion known for his unorthodox striking and relentless pace.",
+            "status": "Active",
+            "hometown": "Brno, Czech Republic",
+            "age": 31,
+            "height": "6'4\"",
+            "biography": "<strong style=\\\"font-size: 20px;\\\">Overview</strong><br>Jiří 'Denisa' Procházka is a former UFC Light Heavyweight Champion, known for his unique striking style and relentless pace. He has quickly become one of the most exciting fighters in the division.<br><br><strong style=\\\"font-size: 20px;\\\">Life</strong><br>Procházka was born on October 14, 1992, in Brno, Czech Republic, and began training in martial arts as a teenager. He developed a unique fighting style that combines elements of various striking disciplines, making him a difficult opponent to predict.<br><br><strong style=\\\"font-size: 20px;\\\">Career</strong><br>Procházka made his UFC debut in 2020 and quickly rose through the ranks with a series of knockout victories. He captured the light heavyweight title in 2022 with a submission victory over Glover Teixeira. Known for his aggressive and unorthodox striking, Procházka has become a fan favorite for his exciting fighting style.<br><br><strong style=\\\"font-size: 20px;\\\">Interesting Anecdotes</strong><br>Procházka is known for his philosophical approach to life and martial arts. He often speaks about the importance of mental and spiritual well-being, and incorporates meditation and visualization techniques into his training. His samurai-inspired mindset and unique fighting style have made him one of the most intriguing figures in the UFC.",
+            "career_highlights": "UFC Light Heavyweight Champion, 2022."
+        }
+    },
+    {
+        "model": "myapp.fighter",
+        "pk": 24,
+        "fields": {
+            "name": "Magomed Ankalaev",
+            "nickname": "",
+            "weight_class": "Light Heavyweight",
+            "record": "18-1-1",
+            "photo": "fighter_photos/magomed_ankalaev.jpg",
+            "description": "Top light heavyweight contender known for his well-rounded skills.",
+            "status": "Active",
+            "hometown": "Makhachkala, Russia",
+            "age": 31,
+            "height": "6'3\"",
+            "biography": "<strong style=\\\"font-size: 20px;\\\">Overview</strong><br>Magomed Ankalaev is a top contender in the UFC Light Heavyweight division, known for his well-rounded skill set and technical proficiency. He is considered one of the most dangerous fighters in the division.<br><br><strong style=\\\"font-size: 20px;\\\">Life</strong><br>Ankalaev was born on June 2, 1992, in Makhachkala, Russia, and began training in martial arts at a young age. He has a background in Greco-Roman wrestling and kickboxing, which laid the foundation for his successful MMA career.<br><br><strong style=\\\"font-size: 20px;\\\">Career</strong><br>Ankalaev made his UFC debut in 2018 and has steadily climbed the ranks with a series of dominant performances. Known for his striking, wrestling, and fight IQ, Ankalaev has defeated some of the top names in the division and is widely regarded as a future champion.<br><br><strong style=\\\"font-size: 20px;\\\">Interesting Anecdotes</strong><br>Ankalaev is known for his calm and composed demeanor, both inside and outside the octagon. Despite his success, he remains focused on improving his skills and achieving his goal of becoming a UFC champion. Ankalaev is also proud of his Dagestani heritage and often represents his region on the global stage.",
+            "career_highlights": "Top UFC Light Heavyweight Contender."
+        }
+    },
+    {
+        "model": "myapp.fighter",
+        "pk": 25,
+        "fields": {
+            "name": "Jamahal Hill",
+            "nickname": "Sweet Dreams",
+            "weight_class": "Light Heavyweight",
+            "record": "12-1-0",
+            "photo": "fighter_photos/jamahal_hill.jpg",
+            "description": "Former light heavyweight champion known for his knockout power.",
+            "status": "Active",
+            "hometown": "Grand Rapids, Michigan, USA",
+            "age": 32,
+            "height": "6'4\"",
+            "biography": "<strong style=\\\"font-size: 20px;\\\">Overview</strong><br>Jamahal 'Sweet Dreams' Hill is a former UFC Light Heavyweight Champion, known for his knockout power and dynamic striking. He is one of the most dangerous finishers in the division.<br><br><strong style=\\\"font-size: 20px;\\\">Life</strong><br>Hill was born on May 19, 1991, in Grand Rapids, Michigan, and began training in martial arts as a way to stay out of trouble as a teenager. He quickly developed a passion for MMA and started competing in regional promotions before making his way to the UFC.<br><br><strong style=\\\"font-size: 20px;\\\">Career</strong><br>Hill made his UFC debut in 2020 and quickly gained attention for his powerful striking and ability to finish fights. He captured the light heavyweight title in 2023 and continues to be a top contender in the division. Hill is known for his aggressive style and willingness to take risks in the octagon.<br><br><strong style=\\\"font-size: 20px;\\\">Interesting Anecdotes</strong><br>Hill's nickname 'Sweet Dreams' reflects his ability to put opponents to sleep with his knockout power. Outside of fighting, Hill is a devoted father and enjoys spending time with his children. Despite his success, he remains humble and focused on his goal of becoming one of the best light heavyweights in UFC history.",
+            "career_highlights": "UFC Light Heavyweight Champion, 2023."
+        }
+    },
+    {
+        "model": "myapp.fighter",
+        "pk": 26,
+        "fields": {
+            "name": "Jon Jones",
+            "nickname": "Bones",
+            "weight_class": "Heavyweight",
+            "record": "27-1-0",
+            "photo": "fighter_photos/jon_jones.jpg",
+            "description": "Heavyweight champion known for his versatile striking, wrestling, and fight IQ.",
+            "status": "Active",
+            "hometown": "Rochester, New York, USA",
+            "age": 36,
+            "height": "6'4\"",
+            "biography": "<strong style=\\\"font-size: 20px;\\\">Overview</strong><br>Jon 'Bones' Jones is the reigning UFC Heavyweight Champion and widely considered one of the greatest mixed martial artists of all time. Known for his unmatched versatility, striking, and wrestling, Jones has dominated two weight classes in the UFC.<br><br><strong style=\\\"font-size: 20px;\\\">Life</strong><br>Born on July 19, 1987, in Rochester, New York, Jones grew up in a family of athletes. He began wrestling in high school and later transitioned to MMA, where he quickly made a name for himself with his unique fighting style and physical attributes. Despite facing various personal and legal challenges, Jones has remained a dominant force in the sport.<br><br><strong style=\\\"font-size: 20px;\\\">Career</strong><br>Jones made his UFC debut in 2008 and became the youngest champion in UFC history at the age of 23 when he captured the light heavyweight title. After a decade of dominance in the light heavyweight division, Jones moved up to heavyweight, where he continued his winning ways by capturing the heavyweight title. His career is marked by victories over some of the biggest names in MMA, including Daniel Cormier, Alexander Gustafsson, and Glover Teixeira.<br><br><strong style=\\\"font-size: 20px;\\\">Interesting Anecdotes</strong><br>Jones is known for his creative and unorthodox techniques, such as spinning elbows and oblique kicks, which have become signature moves in his arsenal. Outside the octagon, Jones has faced several controversies, but his ability to perform at the highest level remains undisputed. He is also known for his strong faith and often speaks about the role of spirituality in his life and career.",
+            "career_highlights": "Youngest UFC Champion, Two-Division Champion (Light Heavyweight, Heavyweight)."
+        }
+    },
+    {
+        "model": "myapp.fighter",
+        "pk": 27,
+        "fields": {
+            "name": "Tom Aspinall",
+            "nickname": "",
+            "weight_class": "Heavyweight",
+            "record": "12-2-0",
+            "photo": "fighter_photos/tom_aspinall.jpg",
+            "description": "Top heavyweight contender known for his speed and striking.",
+            "status": "Active",
+            "hometown": "Atherton, England",
+            "age": 30,
+            "height": "6'5\"",
+            "biography": "<strong style=\\\"font-size: 20px;\\\">Overview</strong><br>Tom Aspinall is a rising star in the UFC Heavyweight division, known for his speed, striking, and well-rounded skill set. Aspinall is considered one of the most promising prospects in the heavyweight division.<br><br><strong style=\\\"font-size: 20px;\\\">Life</strong><br>Aspinall was born on April 11, 1993, in Atherton, England, and grew up in a family with a strong background in martial arts. He began training in Brazilian Jiu-Jitsu and boxing at a young age, which laid the foundation for his MMA career. Aspinall's father is a black belt in BJJ, and he has been a key influence in his son's development as a fighter.<br><br><strong style=\\\"font-size: 20px;\\\">Career</strong><br>Aspinall made his UFC debut in 2020 and quickly made a name for himself with a series of first-round finishes. His speed and technical striking have set him apart from many of his peers in the heavyweight division. Aspinall continues to climb the ranks, with many believing he has the potential to become a future champion.<br><br><strong style=\\\"font-size: 20px;\\\">Interesting Anecdotes</strong><br>Despite his rapid rise in the UFC, Aspinall remains grounded and focused on continuous improvement. He is known for his calm demeanor inside the octagon, which contrasts with his aggressive fighting style. Outside of fighting, Aspinall is a family man and often shares moments with his young children on social media.",
+            "career_highlights": "Top UFC Heavyweight Contender."
+        }
+    },
+    {
+        "model": "myapp.fighter",
+        "pk": 28,
+        "fields": {
+            "name": "Ciryl Gane",
+            "nickname": "Bon Gamin",
+            "weight_class": "Heavyweight",
+            "record": "11-2-0",
+            "photo": "fighter_photos/ciryl_gane.jpg",
+            "description": "Former interim heavyweight champion known for his technical striking and movement.",
+            "status": "Active",
+            "hometown": "La Roche-sur-Yon, France",
+            "age": 33,
+            "height": "6'4\"",
+            "biography": "<strong style=\\\"font-size: 20px;\\\">Overview</strong><br>Ciryl 'Bon Gamin' Gane is a former UFC Interim Heavyweight Champion, known for his technical striking, footwork, and overall athleticism. He has quickly established himself as one of the most skilled heavyweights in the UFC.<br><br><strong style=\\\"font-size: 20px;\\\">Life</strong><br>Gane was born on April 12, 1990, in La Roche-sur-Yon, France, and initially pursued a career in Muay Thai before transitioning to MMA. His background in striking disciplines has given him a unique edge in the heavyweight division, where he is often praised for his movement and precision.<br><br><strong style=\\\"font-size: 20px;\\\">Career</strong><br>Gane made his UFC debut in 2019 and quickly rose through the ranks with a series of impressive victories. He captured the interim heavyweight title in 2021 by defeating Derrick Lewis. Known for his strategic approach and ability to outmaneuver his opponents, Gane is considered one of the top contenders in the heavyweight division.<br><br><strong style=\\\"font-size: 20px;\\\">Interesting Anecdotes</strong><br>Gane is known for his laid-back personality and sportsmanship, often showing respect to his opponents before and after fights. His nickname 'Bon Gamin' translates to 'Good Kid' in French, reflecting his humble nature. Despite his success, Gane remains dedicated to improving his skills and achieving his goal of becoming the undisputed heavyweight champion.",
+            "career_highlights": "UFC Interim Heavyweight Champion, 2021."
+        }
+    },
+    {
+        "model": "myapp.fighter",
+        "pk": 29,
+        "fields": {
+            "name": "Alexander Volkov",
+            "nickname": "Drago",
+            "weight_class": "Heavyweight",
+            "record": "35-10-0",
+            "photo": "fighter_photos/alexander_volkov.jpg",
+            "description": "Experienced heavyweight contender known for his striking and resilience.",
+            "status": "Active",
+            "hometown": "Moscow, Russia",
+            "age": 34,
+            "height": "6'7\"",
+            "biography": "<strong style=\\\"font-size: 20px;\\\">Overview</strong><br>Alexander 'Drago' Volkov is a seasoned UFC Heavyweight contender, known for his height, reach, and technical striking. With over 40 professional fights, Volkov is one of the most experienced fighters in the division.<br><br><strong style=\\\"font-size: 20px;\\\">Life</strong><br>Volkov was born on October 24, 1988, in Moscow, Russia, and began his martial arts journey in karate before transitioning to kickboxing and eventually MMA. His tall frame and reach have made him a formidable striker, capable of keeping opponents at bay with his jab and kicks.<br><br><strong style=\\\"font-size: 20px;\\\">Career</strong><br>Volkov made his UFC debut in 2016 after a successful career in regional promotions. He quickly established himself as a top contender with victories over some of the biggest names in the division. Known for his striking and durability, Volkov has faced numerous top contenders and former champions throughout his career.<br><br><strong style=\\\"font-size: 20px;\\\">Interesting Anecdotes</strong><br>Volkov's nickname 'Drago' is a nod to the famous character from the Rocky movie series, reflecting his stoic and imposing presence in the octagon. Outside of fighting, Volkov is a family man and enjoys spending time with his wife and children. He is also a fan of video games and often streams his gameplay on social media.",
+            "career_highlights": "Top UFC Heavyweight Contender."
+        }
+    },
+    {
+        "model": "myapp.fighter",
+        "pk": 26,
+        "fields": {
+            "name": "Jon Jones",
+            "nickname": "Bones",
+            "weight_class": "Heavyweight",
+            "record": "27-1-0",
+            "photo": "fighter_photos/jon_jones.jpg",
+            "description": "Heavyweight champion known for his versatile striking, wrestling, and fight IQ.",
+            "status": "Active",
+            "hometown": "Rochester, New York, USA",
+            "age": 36,
+            "height": "6'4\"",
+            "biography": "<strong style=\\\"font-size: 20px;\\\">Overview</strong><br>Jon 'Bones' Jones is the reigning UFC Heavyweight Champion and widely considered one of the greatest mixed martial artists of all time. Known for his unmatched versatility, striking, and wrestling, Jones has dominated two weight classes in the UFC.<br><br><strong style=\\\"font-size: 20px;\\\">Life</strong><br>Born on July 19, 1987, in Rochester, New York, Jones grew up in a family of athletes. He began wrestling in high school and later transitioned to MMA, where he quickly made a name for himself with his unique fighting style and physical attributes. Despite facing various personal and legal challenges, Jones has remained a dominant force in the sport.<br><br><strong style=\\\"font-size: 20px;\\\">Career</strong><br>Jones made his UFC debut in 2008 and became the youngest champion in UFC history at the age of 23 when he captured the light heavyweight title. After a decade of dominance in the light heavyweight division, Jones moved up to heavyweight, where he continued his winning ways by capturing the heavyweight title. His career is marked by victories over some of the biggest names in MMA, including Daniel Cormier, Alexander Gustafsson, and Glover Teixeira.<br><br><strong style=\\\"font-size: 20px;\\\">Interesting Anecdotes</strong><br>Jones is known for his creative and unorthodox techniques, such as spinning elbows and oblique kicks, which have become signature moves in his arsenal. Outside the octagon, Jones has faced several controversies, but his ability to perform at the highest level remains undisputed. He is also known for his strong faith and often speaks about the role of spirituality in his life and career.",
+            "career_highlights": "Youngest UFC Champion, Two-Division Champion (Light Heavyweight, Heavyweight)."
+        }
+    },
+    {
+        "model": "myapp.fighter",
+        "pk": 27,
+        "fields": {
+            "name": "Tom Aspinall",
+            "nickname": "",
+            "weight_class": "Heavyweight",
+            "record": "12-2-0",
+            "photo": "fighter_photos/tom_aspinall.jpg",
+            "description": "Top heavyweight contender known for his speed and striking.",
+            "status": "Active",
+            "hometown": "Atherton, England",
+            "age": 30,
+            "height": "6'5\"",
+            "biography": "<strong style=\\\"font-size: 20px;\\\">Overview</strong><br>Tom Aspinall is a rising star in the UFC Heavyweight division, known for his speed, striking, and well-rounded skill set. Aspinall is considered one of the most promising prospects in the heavyweight division.<br><br><strong style=\\\"font-size: 20px;\\\">Life</strong><br>Aspinall was born on April 11, 1993, in Atherton, England, and grew up in a family with a strong background in martial arts. He began training in Brazilian Jiu-Jitsu and boxing at a young age, which laid the foundation for his MMA career. Aspinall's father is a black belt in BJJ, and he has been a key influence in his son's development as a fighter.<br><br><strong style=\\\"font-size: 20px;\\\">Career</strong><br>Aspinall made his UFC debut in 2020 and quickly made a name for himself with a series of first-round finishes. His speed and technical striking have set him apart from many of his peers in the heavyweight division. Aspinall continues to climb the ranks, with many believing he has the potential to become a future champion.<br><br><strong style=\\\"font-size: 20px;\\\">Interesting Anecdotes</strong><br>Despite his rapid rise in the UFC, Aspinall remains grounded and focused on continuous improvement. He is known for his calm demeanor inside the octagon, which contrasts with his aggressive fighting style. Outside of fighting, Aspinall is a family man and often shares moments with his young children on social media.",
+            "career_highlights": "Top UFC Heavyweight Contender."
+        }
+    },
+    {
+        "model": "myapp.fighter",
+        "pk": 28,
+        "fields": {
+            "name": "Ciryl Gane",
+            "nickname": "Bon Gamin",
+            "weight_class": "Heavyweight",
+            "record": "11-2-0",
+            "photo": "fighter_photos/ciryl_gane.jpg",
+            "description": "Former interim heavyweight champion known for his technical striking and movement.",
+            "status": "Active",
+            "hometown": "La Roche-sur-Yon, France",
+            "age": 33,
+            "height": "6'4\"",
+            "biography": "<strong style=\\\"font-size: 20px;\\\">Overview</strong><br>Ciryl 'Bon Gamin' Gane is a former UFC Interim Heavyweight Champion, known for his technical striking, footwork, and overall athleticism. He has quickly established himself as one of the most skilled heavyweights in the UFC.<br><br><strong style=\\\"font-size: 20px;\\\">Life</strong><br>Gane was born on April 12, 1990, in La Roche-sur-Yon, France, and initially pursued a career in Muay Thai before transitioning to MMA. His background in striking disciplines has given him a unique edge in the heavyweight division, where he is often praised for his movement and precision.<br><br><strong style=\\\"font-size: 20px;\\\">Career</strong><br>Gane made his UFC debut in 2019 and quickly rose through the ranks with a series of impressive victories. He captured the interim heavyweight title in 2021 by defeating Derrick Lewis. Known for his strategic approach and ability to outmaneuver his opponents, Gane is considered one of the top contenders in the heavyweight division.<br><br><strong style=\\\"font-size: 20px;\\\">Interesting Anecdotes</strong><br>Gane is known for his laid-back personality and sportsmanship, often showing respect to his opponents before and after fights. His nickname 'Bon Gamin' translates to 'Good Kid' in French, reflecting his humble nature. Despite his success, Gane remains dedicated to improving his skills and achieving his goal of becoming the undisputed heavyweight champion.",
+            "career_highlights": "UFC Interim Heavyweight Champion, 2021."
+        }
+    },
+    {
+        "model": "myapp.fighter",
+        "pk": 29,
+        "fields": {
+            "name": "Alexander Volkov",
+            "nickname": "Drago",
+            "weight_class": "Heavyweight",
+            "record": "35-10-0",
+            "photo": "fighter_photos/alexander_volkov.jpg",
+            "description": "Experienced heavyweight contender known for his striking and resilience.",
+            "status": "Active",
+            "hometown": "Moscow, Russia",
+            "age": 34,
+            "height": "6'7\"",
+            "biography": "<strong style=\\\"font-size: 20px;\\\">Overview</strong><br>Alexander 'Drago' Volkov is a seasoned UFC Heavyweight contender, known for his height, reach, and technical striking. With over 40 professional fights, Volkov is one of the most experienced fighters in the division.<br><br><strong style=\\\"font-size: 20px;\\\">Life</strong><br>Volkov was born on October 24, 1988, in Moscow, Russia, and began his martial arts journey in karate before transitioning to kickboxing and eventually MMA. His tall frame and reach have made him a formidable striker, capable of keeping opponents at bay with his jab and kicks.<br><br><strong style=\\\"font-size: 20px;\\\">Career</strong><br>Volkov made his UFC debut in 2016 after a successful career in regional promotions. He quickly established himself as a top contender with victories over some of the biggest names in the division. Known for his striking and durability, Volkov has faced numerous top contenders and former champions throughout his career.<br><br><strong style=\\\"font-size: 20px;\\\">Interesting Anecdotes</strong><br>Volkov's nickname 'Drago' is a nod to the famous character from the Rocky movie series, reflecting his stoic and imposing presence in the octagon. Outside of fighting, Volkov is a family man and enjoys spending time with his wife and children. He is also a fan of video games and often streams his gameplay on social media.",
+            "career_highlights": "Top UFC Heavyweight Contender."
+        }
+    },
+    {
+        "model": "myapp.fighter",
+        "pk": 30,
+        "fields": {
+            "name": "Conor McGregor",
+            "nickname": "The Notorious",
+            "weight_class": "Lightweight",
+            "record": "22-6-0",
+            "photo": "fighter_photos/conor_mcgregor.jpg",
+            "description": "The first fighter in UFC history to hold titles in two weight classes simultaneously.",
+            "status": "Active",
+            "hometown": "Dublin, Ireland",
+            "age": 35,
+            "height": "5'9\"",
+            "biography": "<strong style=\\\"font-size: 20px;\\\">Overview</strong><br>Conor 'The Notorious' McGregor is one of the most famous and influential figures in the history of mixed martial arts. Known for his striking, charisma, and ability to sell fights, McGregor has transcended the sport to become a global icon.<br><br><strong style=\\\"font-size: 20px;\\\">Life</strong><br>Born on July 14, 1988, in Dublin, Ireland, McGregor grew up in a working-class family and initially pursued a career as a plumber. However, his passion for combat sports led him to train in boxing and MMA. His rise through the regional circuits in Ireland was rapid, and he soon caught the attention of the UFC.<br><br><strong style=\\\"font-size: 20px;\\\">Career</strong><br>McGregor made his UFC debut in 2013 and quickly became known for his knockout power and brash personality. He won the UFC Featherweight Championship in 2015 by defeating Jose Aldo in just 13 seconds, and later claimed the Lightweight title by defeating Eddie Alvarez, becoming the first fighter to hold two UFC titles simultaneously. McGregor's bouts with Nate Diaz and Khabib Nurmagomedov are among the most-watched events in UFC history.<br><br><strong style=\\\"font-size: 20px;\\\">Interesting Anecdotes</strong><br>McGregor is known for his flamboyant lifestyle, including his love of luxury cars, suits, and whiskey, which led to the creation of his own brand, Proper No. Twelve. Despite controversies outside the cage, McGregor remains one of the most popular figures in sports.",
+            "career_highlights": "UFC Featherweight Champion, UFC Lightweight Champion, First Two-Division Champion in UFC History."
+        }
+    },
+    {
+        "model": "myapp.fighter",
+        "pk": 31,
+        "fields": {
+            "name": "Anderson Silva",
+            "nickname": "The Spider",
+            "weight_class": "Middleweight",
+            "record": "34-11-0",
+            "photo": "fighter_photos/anderson_silva.jpg",
+            "description": "One of the greatest fighters of all time, known for his striking accuracy and creativity.",
+            "status": "Retired",
+            "hometown": "Sao Paulo, Brazil",
+            "age": 48,
+            "height": "6'2\"",
+            "biography": "<strong style=\\\"font-size: 20px;\\\">Overview</strong><br>Anderson 'The Spider' Silva is widely regarded as one of the greatest mixed martial artists of all time. His reign as UFC Middleweight Champion is the longest in the history of the promotion, and his striking skills have inspired a generation of fighters.<br><br><strong style=\\\"font-size: 20px;\\\">Life</strong><br>Silva was born on April 14, 1975, in Sao Paulo, Brazil, and began training in martial arts as a child. He initially trained in Taekwondo, Capoeira, and Muay Thai before transitioning to MMA. Silva's unique blend of striking techniques made him a formidable opponent from the outset of his career.<br><br><strong style=\\\"font-size: 20px;\\\">Career</strong><br>Silva made his UFC debut in 2006 and quickly won the Middleweight title, which he defended a record 10 times. Known for his ability to finish fights in spectacular fashion, Silva's highlight-reel knockouts of fighters like Vitor Belfort, Chael Sonnen, and Forrest Griffin are legendary. His unbeaten streak of 16 consecutive wins remains a UFC record.<br><br><strong style=\\\"font-size: 20px;\\\">Interesting Anecdotes</strong><br>Silva's love for comic books inspired his nickname 'The Spider'. Despite his dominance in the cage, Silva is known for his humility and sportsmanship. He has also ventured into acting and continues to be an ambassador for MMA worldwide.",
+            "career_highlights": "UFC Middleweight Champion, Longest Title Reign in UFC History, Most Title Defenses in UFC Middleweight Division."
+        }
+    },
+    {
+        "model": "myapp.fighter",
+        "pk": 32,
+        "fields": {
+            "name": "Georges St-Pierre",
+            "nickname": "GSP",
+            "weight_class": "Welterweight",
+            "record": "26-2-0",
+            "photo": "fighter_photos/georges_st_pierre.jpg",
+            "description": "Considered one of the greatest MMA fighters ever, dominating the welterweight division for years.",
+            "status": "Retired",
+            "hometown": "Saint-Isidore, Quebec, Canada",
+            "age": 42,
+            "height": "5'10\"",
+            "biography": "<strong style=\\\"font-size: 20px;\\\">Overview</strong><br>Georges 'GSP' St-Pierre is a former UFC Welterweight and Middleweight Champion and is widely considered one of the greatest mixed martial artists of all time. Known for his athleticism, fight IQ, and impeccable sportsmanship, St-Pierre's influence on the sport is profound.<br><br><strong style=\\\"font-size: 20px;\\\">Life</strong><br>St-Pierre was born on May 19, 1981, in Saint-Isidore, Quebec, Canada. He began training in Kyokushin karate as a child to defend himself against bullies. This early training laid the foundation for his martial arts career, which would eventually see him become a global icon in MMA.<br><br><strong style=\\\"font-size: 20px;\\\">Career</strong><br>St-Pierre made his UFC debut in 2004 and quickly became one of the most dominant fighters in the welterweight division. He won the welterweight title in 2006 and defended it nine times before stepping away from the sport in 2013. St-Pierre returned in 2017 to capture the middleweight title, solidifying his legacy as one of the greatest fighters of all time.<br><br><strong style=\\\"font-size: 20px;\\\">Interesting Anecdotes</strong><br>St-Pierre is known for his dedication to the sport, including his meticulous preparation and training regimen. He is also a big advocate for anti-bullying initiatives and has spoken openly about his struggles with anxiety and OCD. Outside the octagon, St-Pierre has pursued acting roles in films and television.",
+            "career_highlights": "UFC Welterweight Champion, UFC Middleweight Champion, Most Wins in UFC Title Fights."
+        }
+    },
+    {
+        "model": "myapp.fighter",
+        "pk": 34,
+        "fields": {
+            "name": "Ronda Rousey",
+            "nickname": "Rowdy",
+            "weight_class": "Bantamweight",
+            "record": "12-2-0",
+            "photo": "fighter_photos/ronda_rousey.jpg",
+            "description": "Pioneering female fighter who brought women's MMA into the mainstream.",
+            "status": "Retired",
+            "hometown": "Riverside, California, USA",
+            "age": 37,
+            "height": "5'7\"",
+            "biography": "<strong style=\\\"font-size: 20px;\\\">Overview</strong><br>Ronda 'Rowdy' Rousey is a former UFC Women's Bantamweight Champion and one of the most iconic figures in the history of mixed martial arts. Her dominance in the octagon and her role in bringing women's MMA to the mainstream have made her a global superstar.<br><br><strong style=\\\"font-size: 20px;\\\">Life</strong><br>Rousey was born on February 1, 1987, in Riverside, California, and began training in judo at a young age. She won a bronze medal in judo at the 2008 Beijing Olympics, becoming the first American woman to do so. After the Olympics, Rousey transitioned to MMA, where she quickly made a name for herself with her armbar submissions.<br><br><strong style=\\\"font-size: 20px;\\\">Career</strong><br>Rousey made her UFC debut in 2013 as the first female fighter to sign with the promotion. She quickly became the inaugural Women's Bantamweight Champion and defended her title six times, finishing all her opponents in the first round. Her meteoric rise and crossover appeal helped pave the way for other female fighters in the sport.<br><br><strong style=\\\"font-size: 20px;\\\">Interesting Anecdotes</strong><br>Rousey's popularity transcended MMA, leading to acting roles in movies like 'Furious 7' and 'The Expendables 3'. She later transitioned to professional wrestling, where she became a WWE champion. Rousey is also an advocate for mental health and women's empowerment, using her platform to inspire others.",
+            "career_highlights": "UFC Women's Bantamweight Champion, First Female Fighter in UFC History."
+        }
+    },
+    {
+        "model": "myapp.fighter",
+        "pk": 35,
+        "fields": {
+            "name": "Khabib Nurmagomedov",
+            "nickname": "The Eagle",
+            "weight_class": "Lightweight",
+            "record": "29-0-0",
+            "photo": "fighter_photos/khabib_nurmagomedov.jpg",
+            "description": "Undefeated lightweight champion known for his dominant grappling and wrestling.",
+            "status": "Retired",
+            "hometown": "Makhachkala, Russia",
+            "age": 35,
+            "height": "5'10\"",
+            "biography": "<strong style=\\\"font-size: 20px;\\\">Overview</strong><br>Khabib 'The Eagle' Nurmagomedov is a former UFC Lightweight Champion and one of the most dominant fighters in MMA history. Known for his grappling and ground control, Khabib retired undefeated with a perfect 29-0 record.<br><br><strong style=\\\"font-size: 20px;\\\">Life</strong><br>Born on September 20, 1988, in Makhachkala, Russia, Khabib grew up in the rugged mountains of Dagestan, where he began wrestling at a young age under the guidance of his father, Abdulmanap Nurmagomedov. His upbringing instilled in him a deep sense of discipline and respect for martial arts.<br><br><strong style=\\\"font-size: 20px;\\\">Career</strong><br>Khabib made his UFC debut in 2012 and quickly established himself as a top contender in the lightweight division. His relentless pressure and ability to control opponents on the ground made him a nightmare matchup for anyone in the division. Khabib won the lightweight title in 2018 and defended it three times before retiring in 2020 after defeating Justin Gaethje.<br><br><strong style=\\\"font-size: 20px;\\\">Interesting Anecdotes</strong><br>Khabib's rivalry with Conor McGregor culminated in one of the most-watched and talked-about fights in UFC history. Outside the octagon, Khabib is known for his humility and devotion to his faith. He has since focused on coaching and promoting MMA in Russia, continuing his father's legacy.",
+            "career_highlights": "UFC Lightweight Champion, Undefeated 29-0 Record, Most Takedowns in a UFC Fight."
+        }
+    },
+    {
+        "model": "myapp.fighter",
+        "pk": 36,
+        "fields": {
+            "name": "Chuck Liddell",
+            "nickname": "The Iceman",
+            "weight_class": "Light Heavyweight",
+            "record": "21-9-0",
+            "photo": "fighter_photos/chuck_liddell.jpg",
+            "description": "One of the early superstars of the UFC, known for his striking and knockout power.",
+            "status": "Retired",
+            "hometown": "Santa Barbara, California, USA",
+            "age": 53,
+            "height": "6'2\"",
+            "biography": "<strong style=\\\"font-size: 20px;\\\">Overview</strong><br>Chuck 'The Iceman' Liddell is a former UFC Light Heavyweight Champion and one of the sport's early superstars. Known for his striking power and ability to finish fights, Liddell was a key figure in the UFC's rise to mainstream popularity.<br><br><strong style=\\\"font-size: 20px;\\\">Life</strong><br>Liddell was born on December 17, 1969, in Santa Barbara, California. He began training in martial arts at a young age, starting with karate before transitioning to kickboxing and wrestling. Liddell's distinctive mohawk and tattooed head became symbols of his fearsome presence in the octagon.<br><br><strong style=\\\"font-size: 20px;\\\">Career</strong><br>Liddell made his UFC debut in 1998 and quickly became known for his knockout power. He won the Light Heavyweight title in 2005 and defended it four times, becoming one of the most dominant champions in the division's history. Liddell's rivalries with fighters like Randy Couture and Tito Ortiz are among the most iconic in MMA history.<br><br><strong style=\\\"font-size: 20px;\\\">Interesting Anecdotes</strong><br>After retiring from MMA, Liddell has remained involved in the sport through coaching and media appearances. He has also ventured into acting, appearing in various films and television shows. Liddell's legacy as one of the UFC's first major stars continues to influence the sport today.",
+            "career_highlights": "UFC Light Heavyweight Champion, Most Knockouts in UFC Light Heavyweight History."
+        }
+    },
+    {
+        "model": "myapp.fighter",
+        "pk": 37,
+        "fields": {
+            "name": "Tito Ortiz",
+            "nickname": "The Huntington Beach Bad Boy",
+            "weight_class": "Light Heavyweight",
+            "record": "21-12-1",
+            "photo": "fighter_photos/tito_ortiz.jpg",
+            "description": "Former UFC light heavyweight champion known for his charisma and ground-and-pound style.",
+            "status": "Retired",
+            "hometown": "Huntington Beach, California, USA",
+            "age": 49,
+            "height": "6'2\"",
+            "biography": "<strong style=\\\"font-size: 20px;\\\">Overview</strong><br>Tito 'The Huntington Beach Bad Boy' Ortiz is a former UFC Light Heavyweight Champion and one of the sport's most polarizing figures. Known for his brash personality and ground-and-pound fighting style, Ortiz was a dominant force in the UFC during the early 2000s.<br><br><strong style=\\\"font-size: 20px;\\\">Life</strong><br>Born on January 23, 1975, in Huntington Beach, California, Ortiz had a troubled upbringing but found discipline and purpose in wrestling. His success in high school and college wrestling eventually led him to a career in MMA, where he quickly became one of the sport's biggest stars.<br><br><strong style=\\\"font-size: 20px;\\\">Career</strong><br>Ortiz made his UFC debut in 1997 and won the Light Heavyweight title in 2000. He defended the title five times, becoming one of the longest-reigning champions in the division's history. Ortiz's rivalries with fighters like Ken Shamrock and Chuck Liddell are some of the most famous in MMA.<br><br><strong style=\\\"font-size: 20px;\\\">Interesting Anecdotes</strong><br>Ortiz's charisma and ability to sell fights made him one of the UFC's first true superstars. After his MMA career, Ortiz has been involved in politics, business ventures, and coaching. Despite the controversies that have followed him, Ortiz's contributions to the sport are undeniable.",
+            "career_highlights": "UFC Light Heavyweight Champion, Most Title Defenses in UFC Light Heavyweight History."
+        }
+    },
+    {
+        "model": "myapp.fighter",
+        "pk": 38,
+        "fields": {
+            "name": "Brock Lesnar",
+            "nickname": "The Beast",
+            "weight_class": "Heavyweight",
+            "record": "5-3-0",
+            "photo": "fighter_photos/brock_lesnar.jpg",
+            "description": "Former WWE star turned UFC heavyweight champion, known for his incredible size and strength.",
+            "status": "Retired",
+            "hometown": "Webster, South Dakota, USA",
+            "age": 46,
+            "height": "6'3\"",
+            "biography": "<strong style=\\\"font-size: 20px;\\\">Overview</strong><br>Brock 'The Beast' Lesnar is a former UFC Heavyweight Champion and one of the most physically imposing fighters in the history of the sport. Known for his incredible size, strength, and athleticism, Lesnar transitioned from WWE to MMA and quickly made an impact in the UFC.<br><br><strong style=\\\"font-size: 20px;\\\">Life</strong><br>Lesnar was born on July 12, 1977, in Webster, South Dakota, and grew up on a dairy farm. He excelled in wrestling during high school and college, becoming an NCAA Division I national champion. Lesnar's success in professional wrestling with WWE led him to pursue a career in MMA, where his physical attributes made him a natural fit.<br><br><strong style=\\\"font-size: 20px;\\\">Career</strong><br>Lesnar made his UFC debut in 2008 and won the Heavyweight title later that year by defeating Randy Couture. Despite his limited experience in MMA, Lesnar's raw power and wrestling ability made him a formidable opponent. He successfully defended the title twice before health issues forced him to take a step back from the sport.<br><br><strong style=\\\"font-size: 20px;\\\">Interesting Anecdotes</strong><br>Lesnar's crossover appeal from WWE to UFC helped bring a new audience to MMA. After his MMA career, Lesnar returned to WWE, where he continues to be one of the biggest stars. His unique career path and larger-than-life persona have made him a household name in both professional wrestling and MMA.",
+            "career_highlights": "UFC Heavyweight Champion, NCAA Division I Wrestling Champion."
+        }
+    },
+    {
+        "model": "myapp.fighter",
+        "pk": 39,
+        "fields": {
+            "name": "Daniel Cormier",
+            "nickname": "DC",
+            "weight_class": "Light Heavyweight",
+            "record": "22-3-0",
+            "photo": "fighter_photos/daniel_cormier.jpg",
+            "description": "Former two-division champion, known for his wrestling and fight IQ.",
+            "status": "Retired",
+            "hometown": "Lafayette, Louisiana, USA",
+            "age": 45,
+            "height": "5'11\"",
+            "biography": "<strong style=\\\"font-size: 20px;\\\">Overview</strong><br>Daniel 'DC' Cormier is a former UFC Light Heavyweight and Heavyweight Champion and one of the most respected figures in the sport. Known for his wrestling background and strategic fight IQ, Cormier's success across two weight classes has cemented his legacy as one of the all-time greats.<br><br><strong style=\\\"font-size: 20px;\\\">Life</strong><br>Cormier was born on March 20, 1979, in Lafayette, Louisiana. He had a successful wrestling career in high school and college, becoming a two-time Olympian and an NCAA Division I runner-up. Cormier transitioned to MMA later in life, but quickly rose to the top of the sport.<br><br><strong style=\\\"font-size: 20px;\\\">Career</strong><br>Cormier made his UFC debut in 2013 and went on to win the Light Heavyweight title in 2015. He later moved up to heavyweight, where he defeated Stipe Miocic to become a two-division champion. Cormier's rivalry with Jon Jones is one of the most storied in UFC history. After retiring from fighting, Cormier transitioned to a successful career as a commentator and analyst.<br><br><strong style=\\\"font-size: 20px;\\\">Interesting Anecdotes</strong><br>Cormier is known for his affable personality and his dedication to his family and community. Despite his success, Cormier remains humble and is often seen mentoring young fighters. His contributions to the sport extend beyond his accomplishments in the cage, as he continues to be a positive influence in the MMA community.",
+            "career_highlights": "UFC Light Heavyweight Champion, UFC Heavyweight Champion, Two-Division UFC Champion."
+        }
+    },
+    {
+        "model": "myapp.fighter",
+        "pk": 40,
+        "fields": {
+            "name": "Nate Diaz",
+            "nickname": "",
+            "weight_class": "Lightweight",
+            "record": "21-13-0",
+            "photo": "fighter_photos/nate_diaz.jpg",
+            "description": "Fan-favorite fighter known for his toughness and memorable fights.",
+            "status": "Active",
+            "hometown": "Stockton, California, USA",
+            "age": 38,
+            "height": "6'0\"",
+            "biography": "<strong style=\\\"font-size: 20px;\\\">Overview</strong><br>Nate Diaz is one of the most popular and polarizing figures in MMA. Known for his tough-as-nails attitude and never-back-down fighting style, Diaz has built a loyal fanbase that appreciates his authenticity and no-nonsense approach to the sport.<br><br><strong style=\\\"font-size: 20px;\\\">Life</strong><br>Born on April 16, 1985, in Stockton, California, Diaz grew up in a rough neighborhood and began training in martial arts alongside his brother, Nick Diaz, at a young age. The Diaz brothers became known for their Brazilian Jiu-Jitsu skills and unbreakable fighting spirit.<br><br><strong style=\\\"font-size: 20px;\\\">Career</strong><br>Diaz made his UFC debut in 2007 and quickly made a name for himself with his aggressive style and submission skills. His rivalry with Conor McGregor brought him to mainstream attention, with their two fights being some of the most-watched events in UFC history. Diaz's 'Stockton Slap' and his ability to absorb punishment have made him a fan favorite.<br><br><strong style=\\\"font-size: 20px;\\\">Interesting Anecdotes</strong><br>Diaz is known for his rebellious attitude and willingness to speak his mind, often calling out the UFC and its management. Despite this, his popularity continues to grow, and he remains a sought-after opponent for fighters looking to make a name for themselves. Diaz is also a strong advocate for marijuana legalization and has been vocal about its benefits for athletes.",
+            "career_highlights": "Ultimate Fighter 5 Winner, Most Submission Wins in UFC Lightweight History."
+        }
+    },
+    {
+        "model": "myapp.fighter",
+        "pk": 41,
+        "fields": {
+            "name": "BJ Penn",
+            "nickname": "The Prodigy",
+            "weight_class": "Lightweight",
+            "record": "16-14-2",
+            "photo": "fighter_photos/bj_penn.jpg",
+            "description": "Former two-division champion, known for his exceptional Brazilian Jiu-Jitsu skills.",
+            "status": "Retired",
+            "hometown": "Hilo, Hawaii, USA",
+            "age": 45,
+            "height": "5'9\"",
+            "biography": "<strong style=\\\"font-size: 20px;\\\">Overview</strong><br>BJ 'The Prodigy' Penn is a former UFC Lightweight and Welterweight Champion, known for his exceptional Brazilian Jiu-Jitsu skills and his fearless approach to fighting. Penn was one of the first fighters to win titles in two different weight classes in the UFC.<br><br><strong style=\\\"font-size: 20px;\\\">Life</strong><br>Penn was born on December 13, 1978, in Hilo, Hawaii, and began training in Brazilian Jiu-Jitsu as a teenager. His natural talent for the sport quickly became apparent, and he became the first non-Brazilian to win the World Jiu-Jitsu Championship in the black belt category.<br><br><strong style=\\\"font-size: 20px;\\\">Career</strong><br>Penn made his UFC debut in 2001 and quickly rose through the ranks, winning the Lightweight title in 2008. He later moved up to Welterweight, where he captured another title, becoming one of the most accomplished fighters in the sport's history. Penn's willingness to fight anyone, regardless of weight class, earned him a reputation as one of the toughest competitors in MMA.<br><br><strong style=\\\"font-size: 20px;\\\">Interesting Anecdotes</strong><br>Despite his later struggles in the octagon, Penn remains a beloved figure in the MMA community. His contributions to the sport extend beyond his achievements in the cage, as he has inspired a generation of fighters from Hawaii and around the world. Penn's 'Just Scrap' mentality continues to influence fighters today.",
+            "career_highlights": "UFC Lightweight Champion, UFC Welterweight Champion, First Non-Brazilian to Win BJJ World Championship."
+        }
+    },
+    {
+        "model": "myapp.fighter",
+        "pk": 42,
+        "fields": {
+            "name": "Randy Couture",
+            "nickname": "The Natural",
+            "weight_class": "Heavyweight",
+            "record": "19-11-0",
+            "photo": "fighter_photos/randy_couture.jpg",
+            "description": "Former heavyweight and light heavyweight champion, known for his wrestling and longevity.",
+            "status": "Retired",
+            "hometown": "Lynnwood, Washington, USA",
+            "age": 60,
+            "height": "6'1\"",
+            "biography": "<strong style=\\\"font-size: 20px;\\\">Overview</strong><br>Randy 'The Natural' Couture is a former UFC Heavyweight and Light Heavyweight Champion and one of the most respected figures in the sport. Known for his wrestling prowess and longevity, Couture's career spanned over a decade, and he remains one of the few fighters to have won titles in two different weight classes.<br><br><strong style=\\\"font-size: 20px;\\\">Life</strong><br>Couture was born on June 22, 1963, in Lynnwood, Washington. He had a successful wrestling career in high school and college, becoming an Olympic alternate multiple times. Couture's transition to MMA came later in life, but he quickly established himself as a top contender in the sport.<br><br><strong style=\\\"font-size: 20px;\\\">Career</strong><br>Couture made his UFC debut in 1997 and won his first heavyweight title the same year. He went on to win the light heavyweight title, becoming one of the first fighters to hold titles in two different weight classes. Couture's battles with fighters like Chuck Liddell and Tito Ortiz are legendary, and his ability to compete at a high level well into his 40s is a testament to his skill and conditioning.<br><br><strong style=\\\"font-size: 20px;\\\">Interesting Anecdotes</strong><br>Couture's career extends beyond the octagon, as he has appeared in several films, including 'The Expendables' series. He is also a successful gym owner and coach, helping to train the next generation of MMA fighters. Couture's contributions to the sport have earned him a place in the UFC Hall of Fame.",
+            "career_highlights": "UFC Heavyweight Champion, UFC Light Heavyweight Champion, UFC Hall of Fame Inductee."
+        }
+    },
+    {
+        "model": "myapp.fighter",
+        "pk": 43,
+        "fields": {
+            "name": "Vitor Belfort",
+            "nickname": "The Phenom",
+            "weight_class": "Middleweight",
+            "record": "26-14-0",
+            "photo": "fighter_photos/vitor_belfort.jpg",
+            "description": "Former UFC champion known for his explosive striking and longevity in the sport.",
+            "status": "Retired",
+            "hometown": "Rio de Janeiro, Brazil",
+            "age": 47,
+            "height": "6'0\"",
+            "biography": "<strong style=\\\"font-size: 20px;\\\">Overview</strong><br>Vitor 'The Phenom' Belfort is a former UFC Light Heavyweight Champion and one of the most explosive strikers in MMA history. Known for his lightning-fast hands and knockout power, Belfort has competed in the UFC across three different decades.<br><br><strong style=\\\"font-size: 20px;\\\">Life</strong><br>Belfort was born on April 1, 1977, in Rio de Janeiro, Brazil, and began training in boxing and Brazilian Jiu-Jitsu at a young age. His natural athleticism and dedication to training quickly set him apart from his peers, and he made his UFC debut at just 19 years old.<br><br><strong style=\\\"font-size: 20px;\\\">Career</strong><br>Belfort made an immediate impact in the UFC, winning the UFC 12 Heavyweight Tournament in 1997. He went on to capture the Light Heavyweight title and challenge for the Middleweight title later in his career. Belfort's highlight-reel knockouts of fighters like Wanderlei Silva and Luke Rockhold have made him a fan favorite.<br><br><strong style=\\\"font-size: 20px;\\\">Interesting Anecdotes</strong><br>Belfort's longevity in the sport is a testament to his ability to adapt and evolve as a fighter. Despite setbacks and controversies, he has remained a beloved figure in MMA. Belfort is also known for his strong Christian faith and often speaks about the role of spirituality in his life and career.",
+            "career_highlights": "UFC Light Heavyweight Champion, UFC 12 Heavyweight Tournament Winner."
+        }
+    },
+    {
+        "model": "myapp.fighter",
+        "pk": 44,
+        "fields": {
+            "name": "Jose Aldo",
+            "nickname": "Junior",
+            "weight_class": "Featherweight",
+            "record": "31-8-0",
+            "photo": "fighter_photos/jose_aldo.jpg",
+            "description": "Former featherweight champion known for his striking and leg kicks.",
+            "status": "Retired",
+            "hometown": "Manaus, Brazil",
+            "age": 37,
+            "height": "5'7\"",
+            "biography": "<strong style=\\\"font-size: 20px;\\\">Overview</strong><br>Jose 'Junior' Aldo is a former UFC Featherweight Champion and one of the most dominant fighters in the history of the division. Known for his powerful leg kicks and striking accuracy, Aldo's reign as champion was one of the longest in UFC history.<br><br><strong style=\\\"font-size: 20px;\\\">Life</strong><br>Aldo was born on September 9, 1986, in Manaus, Brazil, and grew up in a poor neighborhood where he often had to fight to protect himself. He began training in Brazilian Jiu-Jitsu and later transitioned to MMA, where his aggressive style quickly earned him a reputation as one of the most exciting fighters to watch.<br><br><strong style=\\\"font-size: 20px;\\\">Career</strong><br>Aldo made his UFC debut in 2011 and was immediately recognized as one of the top featherweights in the world. He defended his title seven times, defeating some of the best fighters in the division. Aldo's quickness, power, and defensive skills made him a nearly unbeatable champion for many years.<br><br><strong style=\\\"font-size: 20px;\\\">Interesting Anecdotes</strong><br>Aldo's legendary rivalry with Conor McGregor culminated in a fight that ended in just 13 seconds, with Aldo suffering his first loss in nearly a decade. Despite the setback, Aldo continued to compete at a high level and remained a fan favorite. Aldo's story of overcoming adversity and achieving greatness is an inspiration to many.",
+            "career_highlights": "UFC Featherweight Champion, Most Title Defenses in UFC Featherweight History."
+        }
+    },
+    {
+        "model": "myapp.fighter",
+        "pk": 45,
+        "fields": {
+            "name": "Matt Hughes",
+            "nickname": "",
+            "weight_class": "Welterweight",
+            "record": "45-9-0",
+            "photo": "fighter_photos/matt_hughes.jpg",
+            "description": "Former welterweight champion known for his wrestling and dominant title reign.",
+            "status": "Retired",
+            "hometown": "Hillsboro, Illinois, USA",
+            "age": 50,
+            "height": "5'9\"",
+            "biography": "<strong style=\\\"font-size: 20px;\\\">Overview</strong><br>Matt Hughes is a former UFC Welterweight Champion and one of the most dominant wrestlers in the history of MMA. Known for his strength, wrestling, and ability to control opponents, Hughes was a force to be reckoned with during his title reign.<br><br><strong style=\\\"font-size: 20px;\\\">Life</strong><br>Hughes was born on October 13, 1973, in Hillsboro, Illinois. He grew up on a farm, where he developed the work ethic and physical strength that would later define his fighting style. Hughes began wrestling in high school and continued to excel in college, where he was a two-time All-American.<br><br><strong style=\\\"font-size: 20px;\\\">Career</strong><br>Hughes made his UFC debut in 1999 and won the Welterweight title in 2001. He defended the title seven times, establishing himself as one of the greatest champions in the division's history. Hughes' rivalries with fighters like Georges St-Pierre and BJ Penn are some of the most memorable in UFC history.<br><br><strong style=\\\"font-size: 20px;\\\">Interesting Anecdotes</strong><br>Hughes' toughness and resilience were put to the test in 2017 when he was involved in a near-fatal train accident. Despite the severity of his injuries, Hughes has made a remarkable recovery and continues to inspire others with his story of survival. He is also a devout Christian and often speaks about the role of faith in his life.",
+            "career_highlights": "UFC Welterweight Champion, UFC Hall of Fame Inductee, Most Title Defenses in UFC Welterweight History."
+        }
+    },
+    {
+        "model": "myapp.fighter",
+        "pk": 46,
+        "fields": {
+            "name": "Henry Cejudo",
+            "nickname": "Triple C",
+            "weight_class": "Flyweight",
+            "record": "16-2-0",
+            "photo": "fighter_photos/henry_cejudo.jpg",
+            "description": "Former flyweight and bantamweight champion, Olympic gold medalist in wrestling.",
+            "status": "Active",
+            "hometown": "Los Angeles, California, USA",
+            "age": 37,
+            "height": "5'4\"",
+            "biography": "<strong style=\\\"font-size: 20px;\\\">Overview</strong><br>Henry 'Triple C' Cejudo is a former UFC Flyweight and Bantamweight Champion, and an Olympic gold medalist in wrestling. Known for his incredible athleticism and strategic fight IQ, Cejudo is one of the most accomplished fighters in MMA history.<br><br><strong style=\\\"font-size: 20px;\\\">Life</strong><br>Cejudo was born on February 9, 1987, in Los Angeles, California. He grew up in a challenging environment but found an outlet in wrestling, where he quickly excelled. At the age of 21, Cejudo won a gold medal in freestyle wrestling at the 2008 Beijing Olympics, making him the youngest American to do so.<br><br><strong style=\\\"font-size: 20px;\\\">Career</strong><br>Cejudo made his UFC debut in 2014 and captured the Flyweight title in 2018 by defeating Demetrious Johnson. He later moved up to Bantamweight, where he won another title, becoming the fourth fighter in UFC history to hold titles in two different weight classes simultaneously. Cejudo retired in 2020 but remains a prominent figure in the MMA community.<br><br><strong style=\\\"font-size: 20px;\\\">Interesting Anecdotes</strong><br>Cejudo's nickname 'Triple C' reflects his accomplishments as an Olympic gold medalist and two-division UFC champion. Known for his confidence and charisma, Cejudo has successfully transitioned into a coaching role, helping to mentor the next generation of fighters. His legacy as one of the best combat sports athletes in history is well established.",
+            "career_highlights": "UFC Flyweight Champion, UFC Bantamweight Champion, Olympic Gold Medalist."
+        }
+    },
+    {
+        "model": "myapp.fighter",
+        "pk": 47,
+        "fields": {
+            "name": "Amanda Nunes",
+            "nickname": "The Lioness",
+            "weight_class": "Bantamweight",
+            "record": "23-5-0",
+            "photo": "fighter_photos/amanda_nunes.jpg",
+            "description": "Former two-division champion and widely regarded as the greatest female fighter of all time.",
+            "status": "Active",
+            "hometown": "Salvador, Brazil",
+            "age": 36,
+            "height": "5'8\"",
+            "biography": "<strong style=\\\"font-size: 20px;\\\">Overview</strong><br>Amanda 'The Lioness' Nunes is a former UFC Bantamweight and Featherweight Champion, and is widely considered the greatest female fighter in MMA history. Known for her knockout power and well-rounded skill set, Nunes has defeated many of the top names in women's MMA.<br><br><strong style=\\\"font-size: 20px;\\\">Life</strong><br>Nunes was born on May 30, 1988, in Salvador, Brazil, and began training in karate and boxing as a child. She later transitioned to Brazilian Jiu-Jitsu and MMA, where she quickly made a name for herself with her aggressive fighting style and finishing ability.<br><br><strong style=\\\"font-size: 20px;\\\">Career</strong><br>Nunes made her UFC debut in 2013 and won the Bantamweight title in 2016 by defeating Miesha Tate. She went on to capture the Featherweight title, becoming the first female fighter to hold titles in two different weight classes simultaneously. Nunes' victories over Ronda Rousey, Cris Cyborg, and Holly Holm have solidified her legacy as one of the best fighters of all time.<br><br><strong style=\\\"font-size: 20px;\\\">Interesting Anecdotes</strong><br>Nunes is known for her humility and dedication to her craft, often crediting her success to her team and family. Outside the octagon, she is a proud mother and often speaks about the importance of family in her life. Nunes' impact on women's MMA extends beyond her accomplishments in the cage, as she has inspired a new generation of female fighters.",
+            "career_highlights": "UFC Bantamweight Champion, UFC Featherweight Champion, First Female Two-Division Champion in UFC History."
+        }
+    },
+    {
+        "model": "myapp.fighter",
+        "pk": 48,
+        "fields": {
+            "name": "Bas Rutten",
+            "nickname": "El Guapo",
+            "weight_class": "Heavyweight",
+            "record": "28-4-1",
+            "photo": "fighter_photos/bas_rutten.jpg",
+            "description": "Former UFC heavyweight champion known for his striking and charisma.",
+            "status": "Retired",
+            "hometown": "Tilburg, Netherlands",
+            "age": 59,
+            "height": "6'1\"",
+            "biography": "<strong style=\\\"font-size: 20px;\\\">Overview</strong><br>Bas 'El Guapo' Rutten is a former UFC Heavyweight Champion and one of the pioneers of modern MMA. Known for his powerful striking and charismatic personality, Rutten's influence on the sport extends beyond his achievements in the octagon.<br><br><strong style=\\\"font-size: 20px;\\\">Life</strong><br>Rutten was born on February 24, 1965, in Tilburg, Netherlands. He began training in martial arts at a young age, starting with Taekwondo and Karate before transitioning to Muay Thai and submission wrestling. Rutten's fighting style and personality quickly made him a fan favorite in the early days of MMA.<br><br><strong style=\\\"font-size: 20px;\\\">Career</strong><br>Rutten made his UFC debut in 1999 and won the Heavyweight title the same year. Despite his relatively short stint in the UFC, Rutten's impact on the sport was significant. After retiring from fighting, he became a successful commentator, coach, and actor, further cementing his legacy in the world of combat sports.<br><br><strong style=\\\"font-size: 20px;\\\">Interesting Anecdotes</strong><br>Rutten is known for his humorous and engaging personality, which has made him a popular figure in both MMA and entertainment. He has appeared in numerous films and television shows, and his self-defense instructional videos have become cult classics. Rutten's love for the sport and his contributions to its growth continue to be celebrated by fans and fighters alike.",
+            "career_highlights": "UFC Heavyweight Champion, King of Pancrase Champion, Successful Commentator and Actor."
+        }
+    },
+    {
+        "model": "myapp.fighter",
+        "pk": 49,
+        "fields": {
+            "name": "Michael Bisping",
+            "nickname": "The Count",
+            "weight_class": "Middleweight",
+            "record": "30-9-0",
+            "photo": "fighter_photos/michael_bisping.jpg",
+            "description": "Former middleweight champion known for his resilience and work ethic.",
+            "status": "Retired",
+            "hometown": "Manchester, England",
+            "age": 45,
+            "height": "6'1\"",
+            "biography": "<strong style=\\\"font-size: 20px;\\\">Overview</strong><br>Michael 'The Count' Bisping is a former UFC Middleweight Champion and one of the most resilient fighters in MMA history. Known for his toughness, work ethic, and ability to overcome adversity, Bisping's journey from underdog to champion is one of the most inspiring stories in the sport.<br><br><strong style=\\\"font-size: 20px;\\\">Life</strong><br>Bisping was born on February 28, 1979, in Manchester, England. He began training in martial arts as a teenager and quickly showed promise as a fighter. Bisping's working-class background and no-nonsense attitude endeared him to fans, and he became a beloved figure in British MMA.<br><br><strong style=\\\"font-size: 20px;\\\">Career</strong><br>Bisping made his UFC debut in 2006 after winning The Ultimate Fighter 3. He steadily climbed the ranks of the middleweight division, but it wasn't until 2016 that he won the Middleweight title, becoming the first British fighter to do so. Bisping's victory over Luke Rockhold to win the title is one of the greatest upsets in UFC history.<br><br><strong style=\\\"font-size: 20px;\\\">Interesting Anecdotes</strong><br>Bisping fought much of his career with a serious eye injury, which eventually led to the loss of vision in one eye. Despite this, he continued to compete at the highest level and retired as one of the most respected fighters in the sport. Bisping has since transitioned to a successful career as a commentator and actor.",
+            "career_highlights": "UFC Middleweight Champion, The Ultimate Fighter 3 Winner, First British UFC Champion."
+        }
+    }
+]
+
+
+
+
+
+
+
