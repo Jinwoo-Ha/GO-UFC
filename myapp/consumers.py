@@ -6,6 +6,10 @@ from django.contrib.auth.models import User
 
 logger = logging.getLogger(__name__)
 
+# 메모리에 메시지 저장
+message_history = []
+MAX_MESSAGES = 100
+
 class ChatConsumer(AsyncWebsocketConsumer):
     async def connect(self):
         logger.info("WebSocket 연결 시도")
@@ -21,6 +25,10 @@ class ChatConsumer(AsyncWebsocketConsumer):
         await self.accept()
         logger.info(f"WebSocket 연결 성공: {self.channel_name}")
 
+        # 연결 시 이전 메시지 전송
+        for message in message_history:
+            await self.send(text_data=json.dumps(message))
+
     async def disconnect(self, close_code):
         logger.info(f"WebSocket 연결 종료 (코드: {close_code}): {self.channel_name}")
         # 그룹에서 나가기
@@ -33,6 +41,16 @@ class ChatConsumer(AsyncWebsocketConsumer):
         logger.info(f"메시지 수신: {text_data}")
         text_data_json = json.loads(text_data)
         message = text_data_json['message']
+        sender = await self.get_username()
+
+        # 메시지 저장
+        message_data = {
+            'message': message,
+            'sender': sender
+        }
+        message_history.append(message_data)
+        if len(message_history) > MAX_MESSAGES:
+            message_history.pop(0)
 
         # 그룹에 메시지 보내기
         await self.channel_layer.group_send(
@@ -40,7 +58,7 @@ class ChatConsumer(AsyncWebsocketConsumer):
             {
                 'type': 'chat_message',
                 'message': message,
-                'sender': self.scope["user"].username if self.scope["user"].is_authenticated else "Anonymous"
+                'sender': sender
             }
         )
 
@@ -58,5 +76,5 @@ class ChatConsumer(AsyncWebsocketConsumer):
         logger.info(f"메시지 전송 완료: {sender}: {message}")
 
     @sync_to_async
-    def get_user(self):
-        return self.scope["user"]
+    def get_username(self):
+        return self.scope["user"].username if self.scope["user"].is_authenticated else "Anonymous"

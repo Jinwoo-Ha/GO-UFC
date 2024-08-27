@@ -10,14 +10,14 @@
 
     }
     .board {
-        width: 90%;
+        width: 70%;
         margin: 20px auto;
         background-color: #161616;
         border-radius: 8px;
         padding: 20px;
     }
     .new-post-button-container {
-        width: 90%; /* 글 목록 영역과 맞추기 위해 컨테이너 너비 설정 */
+        width: 70%; /* 글 목록 영역과 맞추기 위해 컨테이너 너비 설정 */
         margin: 0 auto 20px auto;
         display: flex;
         justify-content: flex-end; /* 오른쪽 정렬 */
@@ -35,6 +35,7 @@
         background-color: #222;
         margin-bottom: 20px;
         padding: 15px;
+        padding-left: 40px;
         border-radius: 5px;
     }
     .post-title {
@@ -97,7 +98,11 @@
 <h1 id = "title_id">Community Board</h1>
 
 <div class="new-post-button-container">
-    <a href="{% url 'post_create' %}" class="new-post-button">Create New Post</a>
+    {% if user.is_authenticated %}
+        <a href="{% url 'post_create' %}" class="new-post-button">Create New Post</a>
+    {% else %}
+        <a href="{% url 'login' %}?next={% url 'post_create' %}" class="new-post-button">Create New Post</a>
+    {% endif %}
 </div>
 
 <div class="board">

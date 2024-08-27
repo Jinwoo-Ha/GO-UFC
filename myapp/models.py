@@ -1,11 +1,16 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.utils import timezone
+
 
 class Video(models.Model):
     title = models.CharField(max_length=200)
     description = models.TextField()
     youtube_id = models.CharField(max_length=20)
     created_at = models.DateTimeField(auto_now_add=True)
+    upload_date = models.DateTimeField(default=timezone.now)
+    view_count = models.IntegerField(default=0)
+    like_count = models.IntegerField(default=0)
 
     def __str__(self):
         return self.title
@@ -40,7 +45,7 @@ class Fighter(models.Model):
     photo = models.URLField(max_length=200, blank=True, null=True)
     description = models.TextField(blank=True, null=True)
     status = models.CharField(max_length=20, null=True, blank=True)
-    hometown = models.CharField(max_length=30, null=True, blank=True)
+    hometown = models.CharField(max_length=50, null=True, blank=True)
     age = models.IntegerField(null=True, blank=True)
     height = models.CharField(max_length=10, null=True, blank=True)
     biography = models.TextField(null=True, blank=True)

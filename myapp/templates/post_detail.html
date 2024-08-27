@@ -23,6 +23,8 @@
         font-size: 24px;
         font-weight: bold;
         color: #fff;
+        padding-left: 15px;
+
     }
     .post-author-date {
         font-size: 14px;
@@ -32,10 +34,11 @@
         margin-bottom: 20px;
         line-height: 1.6;
         text-align: left; /* content를 왼쪽 정렬 */
+        padding-left: 15px;
     }
     .post-image, .post-video {
-        width: 100%;
-        max-width: 100%;
+        width: 50%;
+        max-width: 50%;
         border-radius: 5px;
         margin-bottom: 20px;
     }
@@ -48,17 +51,21 @@
     .like-count {
         margin-right: 10px; /* like 버튼 왼쪽에 간격 추가 */
     }
-    .like-button, .comment-button {
+
+    .like-button, .comment-button, .login-to-like {
         background-color: #444;
         color: #fff;
         border: none;
         padding: 8px 15px;
         border-radius: 3px;
         cursor: pointer;
+        text-decoration: none;  /* 밑줄 제거 */
+        display: inline-block;  /* 인라인 블록으로 설정 */
     }
-    .like-button:hover, .comment-button:hover {
+    .like-button:hover, .comment-button:hover, .login-to-like:hover {
         background-color: #555;
     }
+
     .comments-section {
         margin-top: 40px;
     }
@@ -120,16 +127,20 @@
 
     <div class="post-footer">
         <p class="like-count">Likes: {{ post.likes.count }}</p>
-        <form action="{% url 'post_like' pk=post.pk %}" method="POST">
-            {% csrf_token %}
-            <button type="submit" class="like-button">
-                {% if request.user in post.likes.all %}
-                Unlike
-                {% else %}
-                Like
-                {% endif %}
-            </button>
-        </form>
+        {% if user.is_authenticated %}
+            <form action="{% url 'post_like' pk=post.pk %}" method="POST">
+                {% csrf_token %}
+                <button type="submit" class="like-button">
+                    {% if request.user in post.likes.all %}
+                    Unlike
+                    {% else %}
+                    Like
+                    {% endif %}
+                </button>
+            </form>
+        {% else %}
+            <a href="{% url 'login' %}?next={{ request.path }}" class="login-to-like">Login to Like</a>
+        {% endif %}
     </div>
 </div>
 
@@ -149,6 +160,10 @@
     {% endfor %}
 </div>
 
-<a href="{% url 'add_comment' pk=post.pk %}" class="add-comment-button">Add a Comment</a>
+{% if user.is_authenticated %}
+    <a href="{% url 'add_comment' pk=post.pk %}" class="add-comment-button">Add a Comment</a>
+{% else %}
+    <a href="{% url 'login' %}?next={{ request.path }}#add-comment" class="add-comment-button">Add a Comment</a>
+{% endif %}
 
 {% endblock %}

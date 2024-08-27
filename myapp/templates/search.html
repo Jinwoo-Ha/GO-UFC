@@ -16,7 +16,7 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 .search-container h2 {
-    font-size: 2.8em;  /* Increased size */
+    font-size: 2.8em;
     margin-bottom: 30px;
     text-align: center;
     color: #e6e6e6;
@@ -60,18 +60,11 @@
     color: #bcbcbc;
     text-align: end;
 }
-.results a {
+.results a, .popular-fighters a, .rankings a {
     text-decoration: none; 
     color: inherit; 
 }
-.results a:hover {
-    color: inherit; 
-}
-.popular-fighters a {
-    text-decoration: none; 
-    color: inherit; 
-}
-.popular-fighters a:hover {
+.results a:hover, .popular-fighters a:hover, .rankings a:hover {
     color: inherit; 
 }
 .fighter {
@@ -123,18 +116,21 @@
     margin-top: 15px;
     line-height: 1.6;
 }
-.popular-fighters h2 {
+.popular-fighters h2, .rankings h2 {
     font-size: 34px;
     margin-bottom: 30px;
     text-align: center;
     color: #e6e6e6;
 }
-.fighter-cards {
+.popular-fighters h2{
+    padding-top: 100px;
+}
+.fighter-cards, .champions-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
 }
-.fighter-card {
+.fighter-card, .champion-card {
     background: linear-gradient(145deg, #2c2c2c, #1a1a1a);
     border-radius: 15px;
     padding: 30px;
@@ -143,14 +139,16 @@
     border: 1px solid #444;
     display: flex;
     flex-direction: column;
-    height: 520px;
+    height: auto;
+    min-height: 520px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
 }
-.fighter-card:hover {
+.fighter-card:hover, .champion-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(255, 0, 0, 0.4);
 }
-.fighter-card img {
+.fighter-card img, .champion-card img {
     border-radius: 15px;
     width: 100%;
     height: 300px;
@@ -158,22 +156,26 @@
     margin-bottom: 20px;
     transition: transform 0.3s ease;
 }
-.fighter-card img:hover {
+.fighter-card img:hover, .champion-card img:hover {
     transform: scale(1.05);
 }
-.fighter-card h3 {
+.fighter-card h3, .champion-card h3 {
     font-size: 26px;
     margin-bottom: 15px;
     color: #e6e6e6;
     text-align: left;
     border-bottom: 1px solid #444;
     padding-bottom: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
-.fighter-card p {
+.fighter-card p, .champion-card p {
     font-size: 18px;
     margin: 10px 0;
     color: #b3b3b3;
     text-align: left;
+    word-wrap: break-word;
 }
 .fighter-card .fighter-description {
     font-size: 18px;
@@ -183,7 +185,14 @@
     white-space: nowrap;
     text-align: left;
 }
-
+.rankings {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.champion-card .status {
+    font-weight: bold;
+    color: #ffd700;
+}
 </style>
 
 <div class="container">
@@ -202,15 +211,13 @@
                 <a href="{% url 'fighter_detail' fighter.id %}">
                     <div class="fighter">
                         {% if fighter.photo %}
-                        <img src="{{ fighter.photo}}" alt="{{ fighter.name }}">
+                        <img src="{{ fighter.photo }}" alt="{{ fighter.name }}">
                         {% endif %}
                         <div class="fighter-details">
                             <h3>{{ fighter.name }}</h3>
                             <p><strong>Weight Class:</strong> {{ fighter.weight_class }}</p>
                             <p><strong>Record:</strong> {{ fighter.record }}</p>
-                            <p><strong>Nickname:</strong> {{ fighter.nickname }}</p>
-
-
+                            <p><strong>Nickname:</strong> {{ fighter.nickname|default:"N/A" }}</p>
                         </div>
                     </div>
                 </a>
@@ -222,23 +229,39 @@
         {% endif %}
     </div>
 
+    <div class="rankings">
+        <h2>Champions</h2>
+        <div class="champions-grid">
+            {% for champion in champions %}
+            <a href="{% url 'fighter_detail' champion.id %}">
+                <div class="champion-card">
+                    {% if champion.photo %}
+                    <img src="{{ champion.photo }}" alt="{{ champion.name }}">
+                    {% endif %}
+                    <h3 title="{{ champion.name }}">{{ champion.name }}</h3>
+                    <p><strong>Weight Class:</strong> {{ champion.weight_class }}</p>
+                    <p><strong>Record:</strong> {{ champion.record }}</p>
+                    <p><strong>Nickname:</strong> {{ champion.nickname|default:"N/A" }}</p>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
     <div class="popular-fighters">
         <h2>Popular UFC Fighters</h2>
         <div class="fighter-cards">
-            {% for fighter in popular_fighters|slice:":21" %} <!-- 최대 21명 표시 -->
-            <a href="{% url 'fighter_detail' fighter.id %}">
-                <div class="fighter-card">
-                    {% if fighter.photo %}
-                    <img src="{{ fighter.photo }}" alt="{{ fighter.name }}">
-                    {% endif %}
-                    <h3>{{ fighter.name }}</h3>
-                    <p><strong>Weight Class:</strong> {{ fighter.weight_class }}</p>
-                    <p><strong>Record:</strong> {{ fighter.record }}</p>
-                    <p><strong>Nickname:</strong> {{ fighter.nickname }}</p>
-
-
-                </div>
-            </a>
+            {% for fighter in popular_fighters %}
+                <a href="{% url 'fighter_detail' fighter.id %}">
+                    <div class="fighter-card">
+                        {% if fighter.photo %}
+                        <img src="{{ fighter.photo }}" alt="{{ fighter.name }}">
+                        {% endif %}
+                        <h3>{{ fighter.name }}</h3>
+                        <p><strong>Weight Class:</strong> {{ fighter.weight_class }}</p>
+                        <p><strong>Record:</strong> {{ fighter.record }}</p>
+                        <p><strong>Nickname:</strong> {{ fighter.nickname }}</p>
+                    </div>
+                </a>
             {% endfor %}
         </div>
     </div>
