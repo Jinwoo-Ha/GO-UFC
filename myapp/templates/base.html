@@ -14,40 +14,41 @@
             height: 100%;
             color: #fff;
         }
-
         .navbar {
             background-color: #161616;
             color: #fff;
-            padding: 10px 20px;
+            padding: 0 20px;
             position: fixed;
             top: 0;
             width: 100%;
             z-index: 1000;
             display: flex;
             align-items: center;
-            justify-content: center;
-            height: 4%;
-        }
-        .navbar .logo {
-            position: absolute;
-            left: 0px;
+            justify-content: space-between;
+            height: 8%;
+            box-sizing: border-box;
         }
         .navbar .logo img {
-            height: 80px;
+            height: 60px;
+        }
+        .navbar-links {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         .navbar a {
             color: #fff;
-            margin: 0 70px;
+            margin: 0 30px;
             text-decoration: none;
             font-weight: bold;
             font-size: 20px;
+            white-space: nowrap;
         }
         .navbar a:hover {
             text-decoration: underline;
         }
         .auth-links {
-            position: absolute;
-            right: 20px;
             display: flex;
             align-items: center;
         }
@@ -59,12 +60,23 @@
             font-weight: normal;
         }
         .container {
-            text-align: center;
-            background: black;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px #0000001a;
-            margin-top: 100px;
+            padding-top: 100px;
+        }
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            z-index: 1001;
+        }
+        .hamburger span {
+            width: 30px;
+            height: 3px;
+            background-color: white;
+            margin: 3px 0;
+            transition: 0.4s;
+        }
+        .mobile-menu {
+            display: none;
         }
 
         .auth-form-container {
@@ -75,19 +87,15 @@
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-
         .auth-form h2 {
             margin-bottom: 30px;
             color: #ffffff;
             text-align: center;
             font-size: 28px;
         }
-
         .auth-form .form-group {
             margin-bottom: 25px;
-            margin-right: 20px;
         }
-
         .auth-form label {
             display: block;
             text-align: left;
@@ -95,7 +103,6 @@
             color: #ffffff;
             font-size: 16px;
         }
-
         .auth-form input[type="text"],
         .auth-form input[type="password"],
         .auth-form input[type="email"] {
@@ -107,12 +114,10 @@
             color: #fff;
             font-size: 16px;
         }
-
         .auth-form .button-wrapper {
             text-align: center;
             margin-top: 30px;
         }
-
         .auth-form button {
             width: 60%;
             padding: 12px;
@@ -124,56 +129,145 @@
             font-size: 18px;
             transition: background-color 0.3s;
         }
-
         .auth-form button:hover {
             background-color: #2980b9;
         }
-
         .auth-form p {
             margin-top: 20px;
             text-align: center;
             color: #888;
             font-size: 16px;
         }
-
         .auth-form a {
             color: #3498db;
             text-decoration: none;
         }
-
         .auth-form a:hover {
             text-decoration: underline;
         }
-        .auth-links #login {
-            margin-right: 10px;
+
+        @media (max-width: 1200px) {
+            .navbar a {
+                margin: 0 20px;
+                font-size: 18px;
+            }
         }
 
+        @media (max-width: 1000px) {
+            .navbar a {
+                margin: 0 15px;
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .navbar-links {
+                justify-content: flex-start;
+                margin-left: 100px;
+            }
+            .navbar a {
+                margin: 0 10px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 10px 20px;
+            }
+            .navbar-links, .auth-links {
+                display: none;
+            }
+            .hamburger {
+                display: flex;
+            }
+            .mobile-menu {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: rgba(22, 22, 22, 0.95);
+                z-index: 999;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .mobile-menu.active {
+                display: flex;
+            }
+            .mobile-menu a {
+                color: #fff;
+                text-decoration: none;
+                font-size: 24px;
+                margin: 15px 0;
+                font-weight: bold;
+            }
+            .auth-form-container {
+                width: 90%;
+                padding: 20px;
+                margin: 80px auto;
+            }
+        }
     </style>
 </head>
 <body>
-    <div class="navbar">
+    <nav class="navbar">
         <div class="logo">
             <a href="{% url 'home' %}">
                 <img src="{% static 'logo9.png' %}" alt="Logo">
             </a>
         </div>
+        <div class="navbar-links">
+            <a href="{% url 'upcoming_events' %}">Events</a>
+            <a href="{% url 'community' %}">Community</a>
+            <a href="{% url 'search_results' %}">Fighter Wiki</a>
+            <a href="{% url 'videos' %}">Highlights</a>
+            <a href="{% url 'chatroom' %}">Chat</a>
+        </div>
+        <div class="auth-links">
+            {% if user.is_authenticated %}
+                <a href="{% url 'logout' %}">Logout</a>
+            {% else %}
+                <a id="login" href="{% url 'login' %}">Login</a>
+                <a href="{% url 'signup' %}">Sign Up</a>
+            {% endif %}
+        </div>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    
+    <div class="mobile-menu">
         <a href="{% url 'upcoming_events' %}">Events</a>
         <a href="{% url 'community' %}">Community</a>
         <a href="{% url 'search_results' %}">Fighter Wiki</a>
         <a href="{% url 'videos' %}">Highlights</a>
         <a href="{% url 'chatroom' %}">Chat</a>
-
-        <div class="auth-links">
-            {% if user.is_authenticated %}
-                <a href="{% url 'logout' %}">Logout</a>
-            {% else %}
-                <a id = "login" href="{% url 'login' %}">Login</a>
-                <a href="{% url 'signup' %}">Sign Up</a>
-            {% endif %}
-        </div>
+        {% if user.is_authenticated %}
+            <a href="{% url 'logout' %}">Logout</a>
+        {% else %}
+            <a href="{% url 'login' %}">Login</a>
+            <a href="{% url 'signup' %}">Sign Up</a>
+        {% endif %}
     </div>
+
     <div class="container">
         {% block content %}{% endblock %}
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger');
+            const mobileMenu = document.querySelector('.mobile-menu');
+
+            hamburger.addEventListener('click', function() {
+                this.classList.toggle('active');
+                mobileMenu.classList.toggle('active');
+            });
+        });
+    </script>
 </body>
 </html>
