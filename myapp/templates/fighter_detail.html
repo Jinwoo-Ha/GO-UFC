@@ -5,9 +5,9 @@
 {% block content %}
 <style>
     body {
-        background-color: #000; /* 전체 배경색을 검정색으로 설정 */
+        background-color: #000;
         font-family: 'Noto Sans', sans-serif;
-        color: #fff; /* 기본 텍스트 색상을 흰색으로 설정 */
+        color: #fff;
     }
 
     .container {
@@ -18,7 +18,7 @@
 
     .fighter-profile {
         display: flex;
-        background-color: #222; /* 카드 배경색을 짙은 회색으로 설정 */
+        background-color: #222;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
         border-radius: 8px;
         overflow: hidden;
@@ -36,17 +36,17 @@
     }
 
     .fighter-photo img {
-        width: 100%; /* 이미지의 너비를 부모 요소에 맞춤 */
-        height: 370px; /* 이미지의 높이를 고정 */
-        object-fit: cover; /* 이미지가 지정된 크기에 맞게 자르거나 확대 */
-        border-radius: 8px; /* 사진에도 라운드 효과 추가 */
+        width: 100%;
+        height: 370px;
+        object-fit: cover;
+        border-radius: 8px;
     }
 
     .fighter-nickname {
         margin-top: 13px;
         font-size: 24px;
         font-weight: bold;
-        color: #ffffff; /* 닉네임 색상을 흰색으로 설정 */
+        color: #ffffff;
     }
 
     .fighter-info {
@@ -62,7 +62,7 @@
 
     .fighter-tags {
         margin-bottom: 15px;
-        overflow: hidden; /* 불필요한 영역을 숨기기 */
+        overflow: hidden;
     }
 
     .fighter-tags span {
@@ -70,8 +70,10 @@
         color: #bbb;
         font-size: 14px;
         border-radius: 3px;
-        vertical-align: middle; /* 수직 가운데 정렬 */
-        box-sizing: border-box; /* box-sizing 설정 */
+        vertical-align: middle;
+        box-sizing: border-box;
+        margin-right: 10px;
+        margin-bottom: 5px;
     }
 
     .fighter-record {
@@ -88,7 +90,7 @@
     .bio-section h2 {
         font-size: 28px;
         margin-bottom: 15px;
-        color: #ff0000; /* 소제목 색상을 빨간색으로 설정 */
+        color: #ff0000;
     }
 
     .bio-section .bio-detail {
@@ -120,18 +122,88 @@
     .fighter-bio h2, .fighter-highlights h2 {
         font-size: 28px;
         margin-bottom: 15px;
-        color: #ff0000; /* 소제목 색상을 빨간색으로 설정 */
+        color: #ff0000;
     }
 
     .fighter-bio p, .fighter-highlights p {
         font-size: 16px;
         line-height: 1.6;
         color: #ccc;
-        text-align: left; /* 텍스트를 왼쪽 정렬 */
+        text-align: left;
     }
 
     .fighter-bio p strong, .fighter-highlights p strong {
-        font-weight: bold; /* 강한 강조를 위해 볼드체로 설정 */
+        font-weight: bold;
+    }
+
+    /* 반응형 스타일 */
+    @media (max-width: 768px) {
+        .fighter-profile {
+            flex-direction: column;
+        }
+
+        .fighter-photo {
+            padding: 10px;
+        }
+
+        .fighter-photo img {
+            height: auto;
+            max-height: 300px;
+        }
+
+        .fighter-info {
+            padding: 20px;
+        }
+
+        .fighter-info h1 {
+            font-size: 32px;
+        }
+
+        .fighter-nickname {
+            font-size: 20px;
+        }
+
+        .bio-section h2, .fighter-bio h2, .fighter-highlights h2 {
+            font-size: 24px;
+        }
+
+        .bio-section .bio-label, .bio-section .bio-value {
+            font-size: 16px;
+        }
+
+        .fighter-bio p, .fighter-highlights p {
+            font-size: 14px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .container {
+            padding: 10px;
+        }
+
+        .fighter-info h1 {
+            font-size: 28px;
+        }
+
+        .fighter-nickname {
+            font-size: 18px;
+        }
+
+        .fighter-tags span {
+            font-size: 12px;
+        }
+
+        .fighter-record {
+            font-size: 16px;
+        }
+
+        .bio-section h2, .fighter-bio h2, .fighter-highlights h2 {
+            font-size: 22px;
+        }
+
+        .bio-section .bio-label, .bio-section .bio-value {
+            font-size: 14px;
+        }
     }
 </style>
 

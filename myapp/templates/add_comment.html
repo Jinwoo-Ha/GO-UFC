@@ -6,12 +6,14 @@
 {% block content %}
 <style>
     .form-container {
-        width: 60%;
+        width: 90%;
+        max-width: 800px;
         margin: 40px auto;
         background-color: #161616;
         border-radius: 8px;
         padding: 30px;
         color: #ddd;
+        box-sizing: border-box;
     }
     .form-container h2 {
         color: #fff;
@@ -25,23 +27,18 @@
     }
     .form-container form .form-group {
         display: flex;
-        align-items: center;
+        flex-direction: column;
         margin-bottom: 20px;
-        padding-right: 180px;
-    }
-    .form-container form .form-group label {
-        width: 20%;
-        color: #bbb;
-        font-size: 16px;
     }
     .form-container form .form-group textarea {
-        width: 80%;
+        width: 100%;
         padding: 10px;
         background-color: transparent;
         border: 2px solid #fff;
         border-radius: 5px;
         color: #fff;
         font-size: 16px;
+        box-sizing: border-box;
     }
     .form-container form .form-group textarea::placeholder {
         color: #bbb;
@@ -67,9 +64,9 @@
         color: #fff;
         text-decoration: none;
         background-color: #444;
-        padding: 8px 16px; /* 크기를 줄이기 위해 padding을 감소 */
+        padding: 8px 16px;
         border-radius: 5px;
-        font-size: 14px; /* 글씨 크기 줄임 */
+        font-size: 14px;
         width: fit-content;
         margin-left: auto;
         margin-right: auto;
@@ -77,19 +74,36 @@
     .back-button:hover {
         background-color: #555;
     }
+
+    @media (max-width: 480px) {
+        .form-container {
+            width: 95%;
+            padding: 20px;
+        }
+        .form-container h2 {
+            font-size: 20px;
+        }
+        .form-container form .form-group textarea {
+            font-size: 14px;
+        }
+        .form-container form button,
+        .back-button {
+            font-size: 14px;
+            padding: 8px 12px;
+        }
+    }
 </style>
 
 <div class="form-container">
-    <h2>댓글 추가</h2>
+    <h2>Add comment</h2>
     <form action="" method="post">
         {% csrf_token %}
         <div class="form-group">
-            <label for="id_content">{{ form.content.label }}</label>
             {{ form.content }}
         </div>
-        <button type="submit">댓글 등록</button>
+        <button type="submit">Submit</button>
     </form>
 
-    <a href="{% url 'post_detail' pk=post.pk %}" class="back-button">게시물로 돌아가기</a>
+    <a href="{% url 'post_detail' pk=post.pk %}" class="back-button">Go back</a>
 </div>
 {% endblock %}

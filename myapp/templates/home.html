@@ -19,6 +19,7 @@
     .hero-content {
         padding: 2rem;
         border-radius: 10px;
+        background-color: rgba(0, 0, 0, 0.6);
     }
     .hero h1 {
         font-size: 3rem;
@@ -36,6 +37,7 @@
         text-decoration: none;
         border-radius: 5px;
         transition: background-color 0.3s;
+        display: inline-block;
     }
     .cta-button:hover {
         background-color: #cc0000;
@@ -43,8 +45,8 @@
     .featured-section {
         display: flex;
         justify-content: space-around;
-        padding: 1rem 0; /* 패딩을 줄여 위치를 위로 올림 */
-        margin-top: -2rem; /* 네거티브 마진을 사용해 더 위로 올림 */
+        padding: 1rem 0;
+        margin-top: -2rem;
     }
     .featured-item {
         text-align: center;
@@ -57,29 +59,65 @@
         border-radius: 10px;
         margin-top: 80px;
         margin-bottom: 1rem;
-        transition: transform 0.3s ease, box-shadow 0.3s ease; /* 트랜지션 효과 추가 */
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
     .featured-item img:hover {
-        transform: scale(1.05); /* 호버 시 이미지를 약간 확대 */
-        box-shadow: 0 5px 15px rgba(0,0,0,0.3); /* 호버 시 그림자 효과 추가 */
+        transform: scale(1.05);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     }
-
     .featured-item a {
-    display: block;
-    text-decoration: none;
-    color: var(--text-color);
+        display: block;
+        text-decoration: none;
+        color: var(--text-color);
     }
-
     .featured-item h3 {
         font-size: 1.5em;
         margin: 15px;
         color: var(--primary-color);
     }
-
     .featured-item p {
         font-size: 1em;
         margin: 0 15px 15px;
-        color: var(--text-color);  /* 변경된 부분: var(--text-secondary)에서 var(--text-color)로 */
+        color: var(--text-color);
+    }
+
+    /* 모바일 스타일 */
+    @media (max-width: 768px) {
+        .hero {
+            height: 60vh;
+        }
+        .hero-content {
+            padding: 1rem;
+        }
+        .hero h1 {
+            font-size: 2rem;
+        }
+        .hero p {
+            font-size: 1rem;
+        }
+        .cta-button {
+            padding: 0.8rem 1.5rem;
+            font-size: 1rem;
+        }
+        .featured-section {
+            flex-direction: column;
+            align-items: center;
+            margin-top: 1rem;
+        }
+        .featured-item {
+            width: 90%;
+            margin-bottom: 2rem;
+        }
+        .featured-item img {
+            height: 250px;
+            margin-top: 20px;
+        }
+        .featured-item h3 {
+            font-size: 1.3em;
+        }
+        .featured-item p {
+            font-size: 0.9em;
+        }
     }
 </style>
 
@@ -96,14 +134,14 @@
         <a href="{% url 'upcoming_events' %}">
             <img src="{% static 'upcoming-event.jpg' %}" alt="Upcoming Event">
             <h3>Upcoming Event</h3>
-            <p>View the upcoming ufc fights and vote who will win</p>
+            <p>View the upcoming UFC fights and vote who will win</p>
         </a>
     </div>
     <div class="featured-item">
         <a href="{% url 'search_results' %}">
             <img src="{% static 'Top Fighters.jpg' %}" alt="Top Fighters">
             <h3>Fighter Wiki</h3>
-            <p>Discover and write interesting facts about ufc fighters </p>
+            <p>Discover and write interesting facts about UFC fighters</p>
         </a>
     </div>
     <div class="featured-item">

@@ -193,6 +193,76 @@
     font-weight: bold;
     color: #ffd700;
 }
+
+/* 반응형 스타일 */
+@media (max-width: 1200px) {
+    .fighter-cards, .champions-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 30px 3%;
+    }
+    .search-container {
+        padding: 20px;
+    }
+    .search-container h2 {
+        font-size: 2em;
+    }
+    .search-form input[type="text"] {
+        width: 70%;
+        font-size: 16px;
+    }
+    .search-form button {
+        padding: 15px 20px;
+        font-size: 16px;
+    }
+    .results {
+        max-width: 100%;
+    }
+    .fighter {
+        flex-direction: column;
+        align-items: center;
+    }
+    .fighter img {
+        width: 100%;
+        height: auto;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    .fighter h3 {
+        font-size: 28px;
+    }
+    .fighter p {
+        font-size: 16px;
+    }
+    .popular-fighters h2, .rankings h2 {
+        font-size: 28px;
+    }
+    .fighter-cards, .champions-grid {
+        grid-template-columns: 1fr;
+    }
+    .fighter-card, .champion-card {
+        min-height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .search-form {
+        flex-direction: column;
+    }
+    .search-form input[type="text"] {
+        width: 100%;
+        border-radius: 30px;
+        margin-bottom: 10px;
+    }
+    .search-form button {
+        width: 100%;
+        border-radius: 30px;
+    }
+}
 </style>
 
 <div class="container">
@@ -265,6 +335,5 @@
             {% endfor %}
         </div>
     </div>
-    
 </div>
 {% endblock %}
